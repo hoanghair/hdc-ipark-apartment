@@ -1,0 +1,61 @@
+b<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "회원 정보 수정 - 회원 탈퇴 : 마이 아이파크",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"IPARK | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"IPARK는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'MY IPARK', '회원 정보 수정'],
+        title: `MY IPARK`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['나의 정보 조회', '나의 관심 단지', '1:1 문의', '회원 정보 수정'],
+        selectBtn: '회원 정보 수정',
+      })%>
+      <div class="my_content">
+        <section class="sec_my sec_my_edit">
+          <h2 class="title type_medium">
+            <em class="highlight">탈퇴 시 모든 정보가 영구 삭제됩니다.<br>
+              계속하시겠습니까?</em>
+          </h2>
+          <div class="box_edit_confirm">
+            <p class="confirm_desc">그동안 IPARK를 사랑해 주셔서 감사합니다.<br>
+              회원탈퇴를 원하실 경우, 확인을 위해 비밀번호를 한번 더 입력해 주세요.</p>
+              <div class="box_password_input">
+                <%-include('./include/input/input.ejs', {
+                  type: 'password',
+                  id: 'password',
+                  name: 'password',
+                  placeholder: '비밀번호를 입력해 주세요.',
+                })%>
+                <%-include('./include/button/btn.ejs', {
+                  text: '확인',
+                })%>
+              </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

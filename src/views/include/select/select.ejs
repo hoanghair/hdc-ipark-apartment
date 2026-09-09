@@ -1,0 +1,22 @@
+<% const label = locals.label || ''; %>
+<% const isRequired = locals.isRequired !== false; %>
+<% const selectText = locals.selectText || ''; %>
+<% const selectList = locals.selectList || []; %>
+
+<div class="box_select">
+<% if (label) { %>
+  <span class="label<%= isRequired ? ' is_required' : '' %>"><%= label %></span>
+<% } %>
+  <button type="button" class="btn_select">
+    <%= selectText %>
+  </button>
+  <ul class="list_select_box">
+    <% if(selectList && selectList.length > 0) { %>
+      <% selectList.forEach(item => { %>
+        <li class="item_select_box">
+          <button type="button" class="btn_select_item"><%= item %></button>
+        </li>
+      <% }) %>
+    <% } %>
+  </ul>
+</div>

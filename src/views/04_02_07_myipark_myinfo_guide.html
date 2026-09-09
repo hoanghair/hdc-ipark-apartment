@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "나의 정보 조회 - 입주 안내 : 마이 아이파크",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"IPARK | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"IPARK는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'MY IPARK', '나의 정보 조회'],
+        title: `MY IPARK`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['나의 정보 조회', '나의 관심 단지', '1:1 문의', '회원 정보 수정'],
+        selectBtn: '나의 정보 조회',
+      })%>
+      <%-include('./include/sub/tab_detail.ejs', {
+        listTab: ['계약 안내', '분양대금 조회', '연체·할인 계산기',  '입주안내'],
+        selectBtn: '입주안내',
+        activeIndex: 4,
+      })%>
+      <div class="my_content">
+        <section class="sec_my sec_my_agreement_list">
+          <h2 class="title type_small"><em class="highlight">정아이</em>님의 <br class="only_mo">아이파크 <em class="highlight">입주 관련 안내</em>를 확인해 보세요.</h2>
+          <div class="box_content">
+            <strong class="content_title">
+              <em class="highlight">정아이</em>님의 계약 단지
+            </strong>
+            <%-include('./include/select/select_my.ejs', {
+              label: '단지명',
+              selectText: '꿀단지0101동 0501호',
+              selectList: ['꿀단지0101동 0501호', '꿀단지0101동 0502호', '꿀단지0101동 0503호'],
+            })%>
+          </div>
+        </section>
+        <section class="sec_my sec_my_guide">
+          <h2 class="title">입주 정보</h2>
+          <div class="box_content box_layout_right">
+            <div class="box_guide">
+              <strong class="item_title">입주 지정 기간</strong>
+              <p class="item_desc">· YYYY-MM-DD ~ YYYYY-MM-DD<br>
+                · NN일간</p>
+            </div>
+            <div class="box_guide">
+              <strong class="item_title">입주 안내문</strong>
+              <%- include('./include/button/btn_link.ejs', {
+                text: '안내문 보러가기',
+                href: '#',
+                target: '_blank',
+              }) %>
+            </div>
+            <div class="box_guide">
+              <strong class="item_title">리빙 가이드</strong>
+              <%- include('./include/button/btn_link.ejs', {
+                text: '가이드 보러가기',
+                href: '#',
+                target: '_blank',
+              }) %>
+            </div>
+          </div>
+        </section>
+        <section class="sec_my sec_my_guide">
+          <h2 class="title">입주 절차</h2>
+          <div class="box_content box_layout_right">
+            <ol class="list_process">
+              <li class="item_process">
+                <strong class="item_title">01. 잔금 납부 · 입주증 발급</strong>
+                <ul class="list_info">
+                  <li class="item_info">
+                    <strong class="info_title">잔급 납부 기간</strong>
+                    <p class="info_desc">[아파트 일반]
+                      잔금 납부 기간 : 입주 지정 기간과 동일
+                      잔금 납부 방법 : 공급계약서에 명시된 가상계좌
+                      [아파트 조합]
+                      잔금 납부 기간 : 입주 지정 기간과 동일
+                      API 호출 데이터
+                      잔금 납부 방법 : 공급계약서에 명시된 가상계좌
+                      [오피스텔]
+                      잔금 납부 기간 : 입주 지정 기간과 동일
+                      잔금 납부 방법 : 공급계약서에 명시된 가상계좌</p>
+                  </li>
+                  <li class="item_info">
+                    <strong class="info_title">납부 방법</strong>
+                    <p class="info_desc">입주증발급 기간 : 2025년 11월28일(금) 부터
+                      입주증 발급 장소: 입주증 발급처(아파트 1단지, 오피스텔 : 커뮤니티시
+                      설 내 스터디라운지(북카페) 아파트 2단지 :커뮤니티시설 내 GX룸
+                      
+                      API 호출 데이터
+                      ※ 입주증 발급 시 혼란을 피하기 위해 잔금 완납 시 선발급 해드리오나,
+                      입주 지정 기간 전 입주는 불가합니다. 이 점 양해하시기 바랍니다.</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="item_process">
+                <strong class="item_title">02. 관리비 예치금 납부</strong>
+                <ul class="list_info">
+                  <li class="item_info">
+                    <strong class="info_title">납부 정보</strong>
+                    <p class="info_desc">5-2a [아파트]
+                      일자 : 2025년 11월 28일(금)부터
+                      납부계좌 :834701-04-215910 국민은행
+                      예금주 : (주)케이비아주(이문아이파크자이)
+                      API 호출 데이터
+                      [오피스텔]
+                      일자 : 2025년 11월 28일(금)부터
+                      납부계좌 :989801-00-097555 국민은행
+                      예금주 : (주)쉴드인터내셔널</p>
+                  </li>
+                  <li class="item_info">
+                    <strong class="info_title">납부 장소</strong>
+                    <p class="info_desc">장소 : 관리사무소</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="item_process">
+                <strong class="item_title">03. 열쇠 인수</strong>
+                <ul class="list_info">
+                  <li class="item_info">
+                    <strong class="info_title">인수 일자</strong>
+                    <p class="info_desc">인수 시기 : 2025년 11월28일(금)부터 가능</p>
+                  </li>
+                  <li class="item_info">
+                    <strong class="info_title">인수 장소</strong>
+                    <p class="info_desc">인수 장소 : 서비스라운지
+                      - 1단지, 오피스텔 : 1단지 APT 커뮤니티시설 내 탁구장) 106동 지하
+                      API 호출 데이터 1층
+                      - 2단지 : 실내체육관 203동 지하 2층</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="item_process">
+                <strong class="item_title">04. 취득세 및 등기 안내</strong>
+                <ul class="list_info">
+                  <li class="item_info">
+                    <strong class="info_title">취득세 납부 기한</strong>
+                    <p class="info_desc">취득세 납부기한 잔금 납부일과 사용 검사일 중 늦은 날로부터 60일 API 호출 데이터 이내</p>
+                    <strong class="info_title">소유권 보존 등기</strong>
+                    <p class="info_desc">소유권보존등기 예상 시점 : 2026년 5월쯤 이전고시 후 2026년 API 호출 데이터 연말쯤</p>
+                  </li>
+                  <li class="item_info">
+                    <strong class="info_title">소유권 이전 등기</strong>
+                    <p class="info_desc">소유권이전등기
+                      가능 시기 : 보존등기 이후
+                      개별등기신청 : 입주증 교부처
+                      API 호출 등기의무기한 : 잔금 납부일과 소유권보존등기접수일 중 늦은 날로부터 60일 이내</p>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+
+          </div>
+        </section>
+
+
+        <%-include('./include/banner/banner_app.ejs')%>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

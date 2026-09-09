@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 | 삶을 설계하는 라이프스타일 브랜드",
+  "listTitle": "404 Error : 기타페이지",
+  "metaDesc":"아이파크는 주거를 넘어 도시·레저·리테일까지, 삶의 흐름을 설계합니다.",
+  "ogTitle":"아이파크 | 삶을 설계하는 라이프스타일 브랜드",
+  "ogDesc":"아이파크는 주거를 넘어 도시·레저·리테일까지, 삶의 흐름을 설계하는 라이프스타일 브랜드입니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs', {
+      type: 'type_login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <section class="sec_error">
+        <h1 class="title">페이지를 찾을 수 없습니다.</h1>
+        <p class="desc">요청하신 페이지가 사라졌거나, <br class="only_mo">잘못된 경로를 이용하였습니다.<br>
+        확인 후 다시 시도해 주세요.</p>
+        <%-include('./include/button/btn.ejs', {
+          text: '홈으로',
+        })%>
+      </section>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+
+</body>
+</html>

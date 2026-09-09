@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 프로젝트 | 분양·입주 단지 한눈에 보기", 
+  "listTitle": "주거 프로젝트 (검색) : 프로젝트",
+  "metaDesc":"아이파크의 분양 중·분양 예정·입주 단지 정보를 한눈에 확인하세요. 위치, 규모, 주거 특성을 기준으로 살펴볼 수 있습니다.",
+  "ogTitle":"아이파크 단지 정보 한눈에 보기",
+  "ogDesc":"아이파크의 분양 중·분양 예정 단지를 한곳에서 확인하고, 각 단지의 주거 특성과 정보를 살펴보세요.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'PROJECTS', '주거 프로젝트'],
+        title: `PROJECTS`,
+        subTitle: `일상의 풍경이 기대될 <br class="only_mo">다채로운 컬렉션, IPARK`,
+        desc: `IPARK가 짓는 공간들은 저마다 고유한 이야기와 차별화된 삶의 방식을 품고 있습니다. 오랜 시간 쌓아온 노하우에
+세심한 감각을 더해, 머물수록 깊어지는 주거의 본질을 완성했습니다. 당신의 특별한 오늘이 완성되는 공간, IPARK입니다.`,
+      })%>
+      <div class="project_content">
+        <section class="sec_project_list">
+          <div class="box_search_project">
+            <div class="area_filter">
+              <div class="box_filter">
+                <button type="button" class="btn_filter">위치</button>
+                <ul class="list_filter">
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">경기도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">경상남도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">경상북도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">광주광역시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">대구광역시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">대전광역시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">부산광역시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">서울특별시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">세종특별자치시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">울산광역시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">인천광역시</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">전라남도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">전라북도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">제주특별자치도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">충청남도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">충청북도</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">강원도</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="box_filter">
+                <button type="button" class="btn_filter">단지 상태</button>
+                <ul class="list_filter">
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">분양예정</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">분양중</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">분양완료</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">공사중</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">입주중</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">입주완료</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">분양중, 공사중</button>
+                  </li>
+                  <li class="item_filter">
+                    <button type="button" class="btn_filter_item">분양중, 입주중</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="box_search_input">
+              <input type="text" class="input" placeholder="지역명이나 단지명을 입력해 주세요." value="청라 국제도시 아이파크">
+              <button type="button" class="btn_search">
+                <span class="blind">검색</span>
+              </button>
+            </div>
+          </div>
+          <div class="box_project_content">
+            <div class="box_project_select">
+              <button type="button" class="btn_project_select">All</button>
+              <ul class="list_project_select">
+                <li>
+                  <!-- [D] 활성화 시 is_active 추가 -->
+                  <a href="#" class="btn_project_select_item is_active">All</a>
+                </li>
+                <li>
+                  <a href="#" class="btn_project_select_item">Green</a>
+                </li>
+                <li>
+                  <a href="#" class="btn_project_select_item">Waterfront</a>
+                </li>
+                <li>
+                  <a href="#" class="btn_project_select_item">Connectivity</a>
+                </li>
+                <li>
+                  <a href="#" class="btn_project_select_item">Infra</a>
+                </li>
+                <li>
+                  <a href="#" class="btn_project_select_item">Education</a>
+                </li>
+                <li>
+                  <a href="#" class="btn_project_select_item">Scale</a>
+                </li>
+              </ul>
+            </div>
+            <div class="box_product">
+              <p class="search_result"><em class="keyword">청라 국제도시 아이파크</em>(으)로 검색하신 결과는 <em class="highlight">총 1건</em> 입니다.</p>
+              <p class="notice_desc">하기 CG 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다.</p>
+              <ul class="list_product type_link">
+                <li class="item_product">
+                  <a href="#" class="link_product">
+                    <div class="box_thumb">
+                      <span class="badge_interest">관심단지</span>
+                      <img src="../img/main/img_project_01.jpg" alt="">
+                      <dl class="list_info">
+                        <div class="item_info">
+                          <dt class="item_title">유형</dt>
+                          <dd class="item_desc">오피스텔</dd>
+                        </div>
+                        <div class="item_info">
+                          <dt class="item_title">위치</dt>
+                          <dd class="item_desc">충남 천안시 서북구 부대동 409-1 일원충남 천안시 서북구 부대동 409-1 일원</dd>
+                        </div>
+                        <div class="item_info">
+                          <dt class="item_title">세대수</dt>
+                          <dd class="item_desc">총 1,222세대</dd>
+                        </div>
+                        <div class="item_info">
+                          <dt class="item_title">분양시기</dt>
+                          <dd class="item_desc">2025-08</dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <div class="box_text">
+                      <div class="box_badge">
+                        <span class="badge">
+                          분양중
+                        </span>
+                        <span class="badge">
+                          공사중
+                        </span>
+                      </div>
+                      <strong class="name">천안 아이파트 시티 2단지</strong>
+                      <p class="desc">새로운 청라를 사는 가장 높은 자부심</p>
+                    </div>
+                  </a>
+                  <button type="button" class="btn_interest type_remove">
+                    관심단지 해제
+                  </button>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="box_product" style="display: none;">
+              <p class="search_result"><em class="highlight">총 0건</em>의 검색 결과가 있습니다.</p>
+              <p class="notice_desc">하기 CG 이미지는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다.</p>
+              <%-include('./include/no_data.ejs', {
+                title: '검색 결과가 없습니다.',
+                desc: '다른 검색어로 다시 시도해 주세요.',
+                className: 'type_search',
+              })%>
+              
+            </div>
+          </div>
+          
+        </section>
+        <section class="project_banner">
+          <div class="inner">
+            <div class="box_title">
+              <h2 class="title">FROM SPACE <br class="only_mo">TO SENSE</h2>
+              <p class="desc">공간과 라이프를 연결하는 IPARK의 <br class="only_mo">브랜드 철학을 담은 주거 디자인을 만나보세요.</p>
+            </div>
+            <a href="#" class="link">IPARK 주거 디자인 더 알아보기</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+<!-- [D] 마크업 검수용, 개발제외 -->
+<style>
+  .caseview{
+    position: fixed; right: 0; bottom: 0;background: rgba(0,0,0,0.5);
+    z-index: 10000;
+  }
+  .btn_caseview{
+    font-size: 14px; color: yellow;padding: 10px;width: 100%;
+  }
+  .list_caseview{
+    display: none; flex-direction: column; gap: 10px;text-align: left;align-items: flex-start;padding: 10px;
+  }
+  .list_caseview.is_show{
+    display: flex;
+  }
+  .btn_caseview_item{
+    font-size: 14px; color: #fff;width: 100%;
+    text-align: left;
+  }
+ </style>
+<div class="caseview">
+  <button type="button" class="btn_caseview">Caseview Toogle</button>
+  <div class="list_caseview">
+    <button type="button" class="btn_caseview_item" onClick="document.querySelectorAll('.box_product')[1].style.display = 'block';document.querySelectorAll('.box_product')[0].style.display = 'none';">검색 결과 없음</button>
+  </div>
+</div>
+<script>
+   document.querySelector('.btn_caseview').addEventListener('click', function() {
+    document.querySelector('.list_caseview').classList.toggle('is_show');
+  });
+
+</script>
+<!-- // [D] 마크업 검수용, 개발제외 -->
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "Sub Layout : Common",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"IPARK | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"IPARK는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <h1 class="blind">주거 공간을 넘어 삶의 방식을 설계하는 라이프스타일 플랫폼, IPARK</h1>
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'BRANDS', '브랜드 스토리'],
+        title: `BRAND <br class="only_mo">STORY`,
+        img: '../img/brand/img_brand_story_kv.jpg',
+        subTitle: '주거 공간에서 라이프스타일 플랫폼으로, IPARK',
+        desc: `IPARK는 공간 안에서 펼쳐지는 일상과 삶의 흐름을 먼저 고민해 왔습니다.<br>
+        IPARK가 만들어온 것은 주거공간 <br class="only_mo">그 자체가 아니라, 삶이 어떻게 확장되는지를 바라보는 관점입니다.<br>
+        공간을 넘어 삶의 경험을 제안하는 라이프스타일 플랫폼, IPARK입니다.`,
+        
+      })%>
+      
+      <section class="sec_brand sec_brand_life">
+        <div class="box_brand_title">
+          <p class="eyebrow">Life in Transition</p>
+          <h2 class="title">삶의 흐름을 하나의 경험으로</h2>
+        </div>
+        <ul class="list_brand_life">
+          <li class="item_brand_life">
+            <p class="item_desc">삶은 하나의 공간에 머무르지 않습니다.<br>하루의 흐름 속에서, <br>머무는 순간과 움직이는 장면이 <br>자연스럽게 이어집니다.</p>
+            <p class="item_sub_desc">확장된 일상, 높아진 삶의 기준</p>
+            <div class="box_img">
+              <img src="../img/brand/img_brand_life_01.jpg" alt="">
+            </div>
+          </li>
+          <li class="item_brand_life">
+            <p class="item_desc">IPARK가 제안해온 다양한 삶의 장면은 <br>기술을 토대로 한 감각적·정서적 경험의 <br>창조에서 왔습니다.</p>
+            <p class="item_sub_desc">주거·도시|레저|스포츠|리테일</p>
+            <div class="box_img">
+              <img src="../img/brand/img_brand_life_02.jpg" alt="">
+            </div>
+          </li>
+          <li class="item_brand_life">
+            <p class="item_desc">삶은 하나의 공간에 머무르지 않습니다.<br>하루의 흐름 속에서, <br>머무는 순간과 움직이는 장면이 <br>자연스럽게 이어집니다.</p>
+            <p class="item_sub_desc">공간 너머의 삶의 가능성</p>
+            <div class="box_img">
+              <img src="../img/brand/img_brand_life_03.jpg" alt="">
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="sec_brand sec_brand_core">
+        ...
+      </section>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

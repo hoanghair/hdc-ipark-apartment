@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "나의 정보 조회 - 계약 안내(계좌 정보) : 마이 아이파크",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"IPARK | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"IPARK는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'MY IPARK', '나의 정보 조회'],
+        title: `MY IPARK`,
+      })%>
+       <%-include('./include/sub/tab.ejs', {
+        listTab: ['나의 정보 조회', '나의 관심 단지', '1:1 문의', '회원 정보 수정'],
+        selectBtn: '나의 정보 조회',
+      })%>
+      <%-include('./include/sub/tab_detail.ejs', {
+        listTab: ['계약 안내', '분양대금 조회', '연체·할인 계산기',  '입주안내'],
+        selectBtn: '계약 안내',
+        activeIndex: 0,
+      })%>
+      <div class="my_content">
+        <section class="sec_my sec_my_agreement_list">
+          <h2 class="title type_small"><em class="highlight">정아이</em>님의 <br class="only_mo">아이파크 <em class="highlight">계약 정보</em>를 알려드립니다.</h2>
+          <div class="box_content">
+            <strong class="content_title">
+              <em class="highlight">정아이</em>님의 계약 단지
+            </strong>
+            <%-include('./include/select/select_my.ejs', {
+              label: '단지명',
+              selectText: '꿀단지0101동 0501호',
+              selectList: ['꿀단지0101동 0501호', '꿀단지0101동 0502호', '꿀단지0101동 0503호'],
+            })%>
+          </div>
+        </section>
+        <section class="sec_my sec_my_agreement_info">
+          <h2 class="title">계약안내</h2>
+          <div class="box_content">
+            <div class="box_sub_tab">
+              <!-- [D] 활성화 시 btn_my_tab에 is_active 추가 -->
+              <a href="#" class="btn_sub_tab">본 계약</a>
+              <a href="#" class="btn_sub_tab">옵션 계약</a>
+              <a href="#" class="btn_sub_tab is_active">계좌 정보</a>
+            </div>
+            <div class="box_account">
+              <table class="table_row">
+                <caption class="blind">계좌 정보</caption>
+                <thead>
+                  <tr>
+                    <th>계좌구분</th>
+                    <th>계좌번호</th>
+                    <th>은행명</th>
+                    <th>예금주명</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="계좌구분">일반</td>
+                    <td data-label="계좌번호">1134456745233 (가상계좌)</td>
+                    <td data-label="은행명">경남</td>
+                    <td data-label="예금주명">정보기술팀</td>
+                  </tr>
+                  <tr>
+                    <td data-label="계좌구분">옵션</td>
+                    <td data-label="계좌번호">888-888-888-888</td>
+                    <td data-label="은행명">산업</td>
+                    <td data-label="예금주명">멋진 연탄</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <%-include('./include/banner/banner_app.ejs')%>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

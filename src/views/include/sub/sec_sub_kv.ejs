@@ -1,0 +1,28 @@
+<% const title = locals.title || ''; %>
+<% const subTitle = locals.subTitle || ''; %>
+<% const desc = locals.desc || ''; %>
+<% const breadcrumb = locals.breadcrumb || []; %>
+<% const hasBreadcrumb = breadcrumb && breadcrumb.length > 0; %>
+
+<section class="sec_sub_kv">
+  <h1 class="title"><%- title %></h2>
+  <% if (subTitle && desc) { %>
+    <div class="box_text">
+      <strong class="sub_title"><%- subTitle %></strong>
+      <p class="desc"><%- desc %></p>
+    </div>
+  <% } %>
+  <% if (hasBreadcrumb) { %>
+  <nav class="breadcrumb" aria-label="breadcrumb">
+    <ol class="list_breadcrumb">
+      <% breadcrumb.forEach((item, index) => { %>
+        <% if (index === breadcrumb.length - 1) { %>
+          <li class="item_breadcrumb" aria-current="page"><%= item %></li>
+        <% } else { %>
+          <li class="item_breadcrumb"><%= item %></li>
+        <% } %>
+      <% }) %>
+    </ol>
+  </nav>
+  <% } %>
+</section>

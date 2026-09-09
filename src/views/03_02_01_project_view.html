@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "청라 국제도시 아이파크 | 단지정보", 
+  "listTitle": "주거 프로젝트 상세 : 프로젝트",
+  "metaDesc":"청라 국제도시 아이파크의 위치, 규모, 주거 특성 등 단지 정보를 확인하세요. 아이파크가 제안하는 주거 가치를 소개합니다.",
+  "ogTitle":"청라 국제도시 아이파크 단지정보",
+  "ogDesc":"청라 국제도시 아이파크의 단지 구성과 주거 특성을 한눈에 확인해보세요.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'PROJECTS', '주거 프로젝트', '청라 국제도시 아이파크'],
+        title: `PROJECTS`,
+        subTitle: `일상의 풍경이 기대될 다채로운 컬렉션, IPARK`,
+        desc: `IPARK가 짓는 공간들은 저마다 고유한 이야기와  <br class="only_mo">차별화된 삶의 방식을 품고 있습니다.  <br class="only_mo">오랜 시간 쌓아온 노하우에
+세심한 감각을 더해,  <br class="only_mo">머물수록 깊어지는 주거의 본질을 완성했습니다.  <br class="only_mo">당신의 특별한 오늘이 완성되는 공간,  <br class="only_mo">IPARK입니다.`,
+      })%>
+      <div class="project_content">
+        <section class="sec_project sec_project_overview">
+          <div class="box_title">
+            <div class="box_badge">
+              <span class="badge">분양중</span>
+              <span class="badge">공사중</span>
+            </div>
+            <h2 class="title">천안 아이파크 시티 5단지</h2>
+            
+            <p class="desc">새로운 청라를 사는 가장 높은 자부심</p>
+            <div class="box_link">
+              <%- include('./include/button/link.ejs', {
+                text: '홈페이지',
+                href: '#',
+                target: '_blank',
+              }) %>
+              <%- include('./include/button/link.ejs', {
+                className:"link_pdf",
+                text: '공기질측정서',
+                href: 'https://cdn.i-park.com/resources-stg/upload/moving/2026/03/20260308084711226034.pdf',
+                target: '_blank',
+              }) %>
+            </div>
+
+          </div>
+          <div class="box_content">
+            <div class="box_thumb">
+              <div class="swiper_circle_navigation">
+                <button type="button" class="btn_prev">
+                  <span class="blind">이전</span>
+                </button>
+                <button type="button" class="btn_next">
+                  <span class="blind">다음</span>
+                </button>
+              </div>
+              <div class="swiper swiper_thumb">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="../img/@tmp/@tmp_project_view_thumb.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../img/@tmp/@tmp_project_view_thumb.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="../img/@tmp/@tmp_project_view_thumb.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box_info">
+              <h3 class="sub_title">Information</h3>
+              <dl class="list_info">
+                <div class="item_info">
+                  <dt class="item_title"> · 시행사</dt>
+                  <dd class="item_desc">위탁 : (주)홈에이스개발 / 수탁 : 교보자산신탁(주) </dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 설계사</dt>
+                  <dd class="item_desc">(주)예촌건축사사무소</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 주소</dt>
+                  <dd class="item_desc">인천 서구 청라동 1-403 일원</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 규모</dt>
+                  <dd class="item_desc">지하6층 - 지상42층, 2개동, 오피스텔 1,020실 및 근린생활시설</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 면적</dt>
+                  <dd class="item_desc">전용면적(㎡) : 전용 24~84 / 연면적 : 121,415.78 <br>
+                    / 대지면적(㎡) : 10,406.7</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 시기</dt>
+                  <dd class="item_desc">분양 2021-12 / 입주 2025-07</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 총가구</dt>
+                  <dd class="item_desc">총 1,020실</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 일반분양</dt>
+                  <dd class="item_desc">총 1,020실</dd>
+                </div>
+                <div class="item_info">
+                  <dt class="item_title"> · 문의</dt>
+                  <dd class="item_desc">1670-1144</dd>
+                </div>
+              </dl>
+            </div>
+
+            
+          </div>
+          <div class="box_map">
+            <div class="map">
+              <!-- [D] Map Area -->
+            </div>
+            <div class="box_map_text">
+              <p class="cs_desc">보고 계신 단지 관련<br class="only_pc">
+                상담 · 문의가 필요하신가요?</p>
+                <%- include('./include/button/btn_kakao.ejs') %>
+            </div>
+          </div>
+        </section>
+        <section class="sec_project sec_project_space">
+          <div class="box_title">
+            <div>
+              <span class="eyebrow">공간설계</span>
+              <h3 class="title">아이파크가 삶의 흐름의 설계로 구현해온 기록</h3>
+            </div>
+            <div class="swiper_navigation">
+              <button type="button" class="btn_prev">
+                <span class="blind">이전</span>
+              </button>
+              <button type="button" class="btn_next">
+                <span class="blind">다음</span>
+              </button>
+            </div>
+          </div>
+          <div class="wrap_project_swiper">
+            <div class="box_space_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="../img/@tmp/@tmp_project_space1.jpg" alt="">          
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">          
+                </div>
+                <div class="swiper-slide">
+                  <img src="../img/@tmp/@tmp_project_space3.jpg" alt="">          
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sec_project sec_project_process">
+          <span class="eyebrow">공정현황</span>
+          <h3 class="title">단지별 공정과 <br class="only_mo">조성의 흐름</h3>
+          <div class="box_content">
+            <div class="box_process">
+              <strong class="process_title">전체 공정률</strong>
+              <ul class="list_process">
+                <li class="item_process">완공예정일</li>
+                <li class="item_process">2026.07.31</li>
+              </ul>
+              <em class="process_num">100%</em>
+            </div>
+            <div class="box_process_swiper">
+              
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <span class="date">2026-07</span>
+                  <img src="../img/@tmp/@tmp_project_process.jpg" alt="">          
+                </div>
+                <div class="swiper-slide">
+                  <span class="date">2026-02</span>
+                  <img src="../img/@tmp/@tmp_project_process.jpg" alt="">          
+                </div>
+              </div>
+              <div class="swiper_circle_navigation">
+                <button type="button" class="btn_prev">
+                  <span class="blind">이전</span>
+                </button>
+                <button type="button" class="btn_next">
+                  <span class="blind">다음</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sec_project sec_project_notice">
+          <span class="eyebrow">소식 및 공지</span>
+          <h3 class="title">청라 국제도시 아이파크의 이야기 소식</h3>
+          <div class="box_content">
+            <div class="box_sub_tab" role="tablist">
+              <button type="button" class="btn_sub_tab js_sub_tab is_active" role="tab" aria-selected="true" aria-controls="tab-panel-news" >최신소식</button>
+              <button type="button" class="btn_sub_tab js_sub_tab " role="tab" aria-selected="false" aria-controls="tab-panel-notice" >공지사항</button>
+            </div>
+            <div class="box_tab_panel">
+              <div role="tabpanel" id="tab-panel-news" class="project_tab_panel is_show">
+                <ul class="list_news">
+                  <li class="item_news">
+                    <a href="#">
+                      <div class="box_thumb">
+                        <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">
+                      </div>
+                      <span class="date">2030-12-31</span>
+                      <div class="nexs_title_box">
+                        <strong class="news_title">여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기  여기에 제목이 최대 2줄 들어갑니</strong>
+                        <span class="icon_link_arrow"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="item_news">
+                    <a href="#">
+                      <div class="box_thumb">
+                        <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">
+                      </div>
+                      <span class="date">2030-12-31</span>
+                      <div class="nexs_title_box">
+                        <strong class="news_title">제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목제목</strong>
+                        <span class="icon_link_arrow"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="item_news">
+                    <a href="#">
+                      <div class="box_thumb">
+                        <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">
+                      </div>
+                      <span class="date">2030-12-31</span>
+                      <div class="nexs_title_box">
+                        <strong class="news_title">제목제목제</strong>
+                        <span class="icon_link_arrow"></span>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="item_news">
+                    <a href="#">
+                      <div class="box_thumb">
+                        <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">
+                      </div>
+                      <span class="date">2030-12-31</span>
+                      <strong class="news_title">여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목 </strong>
+                    </a>
+                  </li>
+                  <li class="item_news">
+                    <a href="#">
+                      <div class="box_thumb">
+                        <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">
+                      </div>
+                      <span class="date">2030-12-31</span>
+                      <strong class="news_title">여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목 </strong>
+                    </a>
+                  </li>
+                  <li class="item_news">
+                    <a href="#">
+                      <div class="box_thumb">
+                        <img src="../img/@tmp/@tmp_project_space2.jpg" alt="">
+                      </div>
+                      <span class="date">2030-12-31</span>
+                      <strong class="news_title">여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목이 최대 2줄 들어갑니다. 여기에 제목 </strong>
+                    </a>
+                  </li>
+                </ul>
+                <%- include('./include/pagination.ejs', {
+                  total: 5,
+                  current: 1,
+                  href: '#',
+                }) %>
+                <%- include('./include/no_data.ejs', {
+                  title: '등록된 최신소식이 없습니다.',
+                  desc: '곧 새로운 게시물로 찾아 뵙겠습니다.',
+                }) %>
+              </div>
+              <div role="tabpanel" id="tab-panel-notice" class="project_tab_panel">
+                <ul class="list_notice">
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. </strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. </strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                  <li class="item_notice">
+                    <a href="#" class="link_notice">
+                      <span class="date">2030-12-31</span>
+                      <strong class="notice_title">여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에 제목이 들어갑니다. 여기에</strong>
+                    </a>
+                  </li>
+                </ul>
+                <%- include('./include/pagination.ejs', {
+                  total: 5,
+                  current: 1,
+                  href: '#',
+                }) %>
+                <%- include('./include/no_data.ejs', {
+                  title: '등록된 공지사항이 없습니다.',
+                  desc: '곧 새로운 게시물로 찾아 뵙겠습니다.',
+                }) %>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+  <div class="layer_img">
+    <div class="layer_img_inner">
+      <div class="box_img">
+        <img src="" alt="">
+      </div>
+      <button type="button" class="btn_close">
+        <span class="blind">닫기</span>
+      </button>
+    </div>
+  </div>
+<%-include('./include/layout/script.ejs')%>
+<!-- [D] 마크업 검수용, 개발제외 -->
+<style>
+  .caseview{
+    position: fixed; right: 0; bottom: 0;background: rgba(0,0,0,0.5);
+    z-index: 10000;
+  }
+  .btn_caseview{
+    font-size: 14px; color: yellow;padding: 10px;width: 100%;
+  }
+  .list_caseview{
+    display: none; flex-direction: column; gap: 10px;text-align: left;align-items: flex-start;padding: 10px;
+  }
+  .list_caseview.is_show{
+    display: flex;
+  }
+  .btn_caseview_item{
+    font-size: 14px; color: #fff;width: 100%;
+    text-align: left;
+  }
+ </style>
+<div class="caseview">
+  <button type="button" class="btn_caseview">Caseview Toogle</button>
+  <div class="list_caseview">
+    <button type="button" class="btn_caseview_item" onClick="onChangeOverview(0);">[개요] 홈페이지만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeOverview(1);">[개요] 공기질측정서만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeOverview(2);">[개요] 버튼 미제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeSpace(0);">[공간설계] 동호배치도만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeSpace(1);">[공간설계] 인테리어만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="document.querySelector('.sec_project_process .box_process').style.display = 'none';">[공정현황] 공정현황 미제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeNotice();">[소식 및 공지] 소식 및 공지 없음</button>
+  </div>
+</div>
+<script>
+  document.querySelector('.btn_caseview').addEventListener('click', function() {
+    document.querySelector('.list_caseview').classList.toggle('is_show');
+  });
+
+  function onChangeOverview(index){
+    const btn = document.querySelectorAll('.sec_project_overview .box_link .link');
+
+    btn.forEach(item => {
+      item.style.display = 'none';
+    });
+    btn[index].style.display = 'flex';
+
+  }
+
+  function onChangeSpace(index){
+    const slide = document.querySelectorAll('.sec_project_space .swiper-slide');
+    slide.forEach(item => {
+      item.style.display = 'block';
+    });
+    if(index == 0){
+      slide[1].style.display = 'none';
+      slide[2].style.display = 'none';
+    }else if(index == 1){
+      slide[0].style.display = 'none';
+      
+    }
+    swiperSpace.update();
+    
+  }
+
+  document.querySelectorAll('.content_none ').forEach(item => {
+    item.style.display = 'none';
+  });
+
+  function onChangeNotice(){
+    const pagination = document.querySelectorAll('.sec_project_notice .pagination');
+    const listNotice = document.querySelector('.sec_project_notice .list_notice');
+    const listNews = document.querySelector('.sec_project_notice .list_news');
+    const noDataNotice = document.querySelectorAll('.sec_project_notice .content_none');
+    pagination.forEach(item => {
+      item.style.display = 'none';
+    });
+
+    listNotice.style.display = 'none';
+    listNews.style.display = 'none';
+    noDataNotice.forEach(item => {
+      item.style.display = 'block';
+    });
+    
+  }
+</script>
+<!-- // [D] 마크업 검수용, 개발제외 -->
+</body>
+</html>

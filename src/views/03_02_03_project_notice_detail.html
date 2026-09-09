@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "$HDC현대산업개발, ‘청라국제도시아이파크’분양$", 
+  "listTitle": "공지사항 : 프로젝트",
+  "metaDesc":"$청라국제도시아이파크$의 최신소식을 확인해 보세요.",
+  "ogTitle":"$HDC현대산업개발, ‘청라국제도시아이파크’분양$",
+  "ogDesc":"$청라국제도시아이파크$의 최신소식을 확인해 보세요.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'PROJECTS', '공지사항'],
+        title: `PROJECTS`,
+        subTitle: `일상의 풍경이 기대될 <br class="only_mo">다채로운 컬렉션, IPARK`,
+        desc: `IPARK가 짓는 공간들은 저마다 고유한 이야기와 차별화된 삶의 방식을 품고 있습니다. 오랜 시간 쌓아온 노하우에
+세심한 감각을 더해, 머물수록 깊어지는 주거의 본질을 완성했습니다. 당신의 특별한 오늘이 완성되는 공간, IPARK입니다.`,
+      })%>
+    </main>
+    <!-- // Contents -->
+    <div class="project_content">
+      <section class="sec_project_news_view">
+        <div class="box_detail">
+          <div class="box_detail_title">
+            <span class="date">2025-10-20</span>
+            <h2 class="detail_title">[잠실 래미안 아이파크] 실내 공기질 측정 입회 신청인 모집</h2>
+          </div>
+          <dl class="list_detail_info">
+            <div class="item_detail_info">
+              <dt class="item_title">첨부파일</dt>
+              <dd class="item_desc">
+                <a href="#" class="detail_file"><span class="file_name">납입 내역_20250212</span><span class="file_extension">.jpg</span></a>
+                <a href="#" class="detail_file"><span class="file_name">납입 증명서 발급 확인서_우리은행_20250213납입 증명서 발급 확인서_우리은행</span><span class="file_extension">.pdf</span></a>
+              </dd>
+            </div>
+          </dl>
+          <div class="detail_content">
+            <h1>heading 1</h1>
+            <h2>heading 2</h2>
+            <h3>heading 3</h3>
+            <h4>heading 4</h4>
+            <h5>heading 5</h5>
+            <h6>heading 6</h6>
+            <p>안녕하세요. HDC현대산업개발 아이파크 입니다.항상 저희 아이파크를 아끼고 사랑해 주시는 고객 여러분들께 감사드립니다.개인정보 취급방침 변경에 따라 아래와 같이 개정내용을 공지합니다.</p>
+            <p>- 일상의 주거 경험을 세심하게 디자인한 지역 최고 높이 29층 프리미엄 단지
+              - 아이파크만의 공간 철학인 'PARK MOMENTS'를 적용한 혁신적 평면설계
+              - 랜드마크에서 누리는 차별화된 공간, 세대 간 간섭 제로ㆍ개방된 조망 확보</p>
+              <img src="../img/@tmp/@tmp_project_space1.jpg" alt="">
+              <p>HDC현대산업개발은 12월 1일 서산센트럴아이파크 견본주택을 열고 분양에 나섭니다. 충청남도 서산시 석림동 528-1번지 일원에 공급되는 서산센트럴아이파크는
+                지하 2층~지상 최고 29층, 4개동, 전용면적 84~116m² 타입 총 410가구 규모로 공급됩니다.</p>
+
+          </div>
+          <div class="detail_btn">
+            <a href="#" class="link_text">
+              <em class="direction">Prev.</em>
+              <span class="title">[광명센트럴아이파크] 관심고객 5차 발표 안내</span>
+            </a>
+            <!--[D] 이전/다음 글이 없는 경우 a태그에 is_disabled 클래스 추가 -->
+            <a href="#" class="link_text is_disabled">
+              <em class="direction">Next.</em>
+              <span class="title">다음글이 없습니다.</span>
+            </a>
+          </div>
+          <a href="#" class="btn_list">프로젝트 돌아가기</a>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+  <div class="layer_img">
+    <div class="layer_img_inner">
+      <div class="box_img">
+        <img src="" alt="">
+      </div>
+      <button type="button" class="btn_close">
+        <span class="blind">닫기</span>
+      </button>
+    </div>
+  </div>
+<%-include('./include/layout/script.ejs')%>
+<!-- [D] 마크업 검수용, 개발제외 -->
+<style>
+  .caseview{
+    position: fixed; right: 0; bottom: 0;background: rgba(0,0,0,0.5);
+    z-index: 10000;
+  }
+  .btn_caseview{
+    font-size: 14px; color: yellow;padding: 10px;width: 100%;
+  }
+  .list_caseview{
+    display: none; flex-direction: column; gap: 10px;text-align: left;align-items: flex-start;padding: 10px;
+  }
+  .list_caseview.is_show{
+    display: flex;
+  }
+  .btn_caseview_item{
+    font-size: 14px; color: #fff;width: 100%;
+    text-align: left;
+  }
+ </style>
+<div class="caseview">
+  <button type="button" class="btn_caseview">Caseview Toogle</button>
+  <div class="list_caseview">
+    <button type="button" class="btn_caseview_item" onClick="onChangeOverview(0);">[개요] 홈페이지만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeOverview(1);">[개요] 공기질측정서만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeOverview(2);">[개요] 버튼 미제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeSpace(0);">[공간설계] 동호배치도만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeSpace(1);">[공간설계] 인테리어만 제공</button>
+    <button type="button" class="btn_caseview_item" onClick="document.querySelector('.sec_project_process .box_process').style.display = 'none';">[공정현황] 공정현황 미제공</button>
+    <button type="button" class="btn_caseview_item" onClick="onChangeNotice();">[소식 및 공지] 소식 및 공지 없음</button>
+  </div>
+</div>
+<script>
+  document.querySelector('.btn_caseview').addEventListener('click', function() {
+    document.querySelector('.list_caseview').classList.toggle('is_show');
+  });
+
+  function onChangeOverview(index){
+    const btn = document.querySelectorAll('.sec_project_overview .box_link .link');
+
+    btn.forEach(item => {
+      item.style.display = 'none';
+    });
+    btn[index].style.display = 'flex';
+
+  }
+
+  function onChangeSpace(index){
+    const slide = document.querySelectorAll('.sec_project_space .swiper-slide');
+    slide.forEach(item => {
+      item.style.display = 'block';
+    });
+    if(index == 0){
+      slide[1].style.display = 'none';
+      slide[2].style.display = 'none';
+    }else if(index == 1){
+      slide[0].style.display = 'none';
+      
+    }
+    swiperSpace.update();
+    
+  }
+
+  document.querySelectorAll('.content_none ').forEach(item => {
+    item.style.display = 'none';
+  });
+
+  function onChangeNotice(){
+    const pagination = document.querySelectorAll('.sec_project_notice .pagination');
+    const listNotice = document.querySelector('.sec_project_notice .list_notice');
+    const listNews = document.querySelector('.sec_project_notice .list_news');
+    const noDataNotice = document.querySelectorAll('.sec_project_notice .content_none');
+    pagination.forEach(item => {
+      item.style.display = 'none';
+    });
+
+    listNotice.style.display = 'none';
+    listNews.style.display = 'none';
+    noDataNotice.forEach(item => {
+      item.style.display = 'block';
+    });
+    
+  }
+</script>
+<!-- // [D] 마크업 검수용, 개발제외 -->
+</body>
+</html>

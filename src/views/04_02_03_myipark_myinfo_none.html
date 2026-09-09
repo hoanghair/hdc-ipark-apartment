@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "나의 정보 조회 - 계약 안내(없음) : 마이 아이파크",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"IPARK | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"IPARK는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'MY IPARK', '나의 정보 조회'],
+        title: `MY IPARK`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['나의 정보 조회', '나의 관심 단지', '1:1 문의', '회원 정보 수정'],
+        selectBtn: '나의 정보 조회',
+      })%>
+      <div class="my_content">
+        <section class="sec_my sec_my_agreement_none">
+          <div class="inner">
+            <div class="box_text">
+              <h2 class="title">
+                <em class="highlight">정아이</em>님, <br >
+                현재 계약된 단지 정보가 없습니다.
+              </h2>
+              <p class="desc">완료된 계약이 사이트에서 확인되지 않는 경우,<br>
+                <a href="#" class="link_inquiry">1:1 문의등록</a> 혹은 고객센터 전화 상담을 통해 문의하실 수 있습니다.</p>
+            </div>
+            <div class="box_cs">
+              <span class="eyebrow">아이파크 고객센터</span>
+              <em class="tel_num">1670-1144</em>
+              <dl class="list_time">
+                <div class="item_time">
+                  <dt class="time_title">평일</dt>
+                  <dd class="time_desc">09:00 ~ 18:00 <br class="only_mo">(점심시간: 12:00 ~ 13:00)</dd>
+                </div>
+                <div class="item_time">
+                  <span class="time_title">토요일</span>
+                  <span class="time_desc">09:00 ~ 13:00 <br class="only_mo">(일요일 / 공휴일 휴무)</span>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+
+        <%-include('./include/banner/banner_app.ejs')%>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

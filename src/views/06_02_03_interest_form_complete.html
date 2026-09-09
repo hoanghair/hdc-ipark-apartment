@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 | 삶을 설계하는 라이프스타일 브랜드",
+  "listTitle": "관심고객 등록 - 완료 : 기타페이지",
+  "metaDesc":"아이파크는 주거를 넘어 도시·레저·리테일까지, 삶의 흐름을 설계합니다.",
+  "ogTitle":"아이파크 | 삶을 설계하는 라이프스타일 브랜드",
+  "ogDesc":"아이파크는 주거를 넘어 도시·레저·리테일까지, 삶의 흐름을 설계하는 라이프스타일 브랜드입니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs', {
+      type: 'type_login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <div class="interest_content">
+        <section class="sec_interest">
+          <div class="box_complete">
+            <h1 class="sub_title">관심고객 등록이 완료되었습니다.</h1>
+            <p class="desc">감사합니다.</p>
+            <div class="box_btn_area">
+              <div class="box_btn">
+                <%-include('./include/button/btn.ejs', {
+                  text: '메인으로',
+                })%>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+
+</body>
+</html>

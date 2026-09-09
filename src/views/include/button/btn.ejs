@@ -1,0 +1,13 @@
+<% const text = locals.text || ''; %>
+<% const className = locals.className || ''; %>
+<% const href = locals.href || ''; %>
+
+<% if(href){ %>
+  <a href="<%= href %>" class="btn <%= className %>">
+    <%= text %>
+  </a>
+<% } else { %>
+  <button type="button" class="btn <%= className %>">
+    <%= text %>
+  </button>
+<% } %>

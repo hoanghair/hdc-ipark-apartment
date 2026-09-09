@@ -1,0 +1,4 @@
+<% const isCollapsed = locals.isCollapsed || false; %>
+<% const text = isCollapsed ? '접기' : '더보기'; %>
+
+<button type="button" class="btn_more <%= isCollapsed ? 'is_collapsed' : '' %>"><%= text %></button>

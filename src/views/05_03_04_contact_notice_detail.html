@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 공지사항 | 공식 안내 및 소식",
+  "listTitle": "공지사항 - 상세페이지 : 고객센터",
+  "metaDesc": "아이파크의 주요 공지사항과 공식 안내 소식을 확인하실 수 있습니다.",
+  "ogTitle": "아이파크 공지사항 | 공식 안내 및 소식",
+  "ogDesc": "아이파크의 공식 공지사항과 주요 안내 소식을 한 곳에서 확인하세요.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'CONTACT', '공지사항'],
+        title: `CONTACT`,
+      })%>
+      <div class="contact_content">
+        <section class="sec_contact sec_contact_notice_detail">
+          <div class="box_detail">
+            <div class="box_detail_title">
+              <span class="date">2025-10-20</span>
+              <h2 class="detail_title">[잠실 래미안 아이파크] 실내 공기질 측정 입회 신청인 모집</h2>
+            </div>
+            <dl class="list_detail_info">
+              <div class="item_detail_info">
+                <dt class="item_title">첨부파일</dt>
+                <dd class="item_desc"><a href="#" class="detail_file"><span class="file_name">납입 내역_20250212</span><span class="file_extension">.jpg</span></a><a href="#" class="detail_file"><span class="file_name">납입 증명서 발급 확인서_우리은행_20250213납입 증명서 발급 확인서_우리은행</span><span class="file_extension">.pdf</span></a></dd>
+              </div>
+            </dl>
+            <p class="detail_content">안녕하세요. HDC현대산업개발 아이파크 입니다. 항상 저희 아이파크를 아끼고 사랑해 주시는 고객 여러분들께 감사드립니다. 개인정보 취급방침 변경에 따라 아래와 같이 개정내용을 공지합니다.
+ 
+              1. 개정 주요 내용
+                - 수집하는 개인정보 항목
+                - 개인정보의 수집 및 이용목적
+                - 개인정보 보유 및 이용 기간에 관한 사항
+                - 개인정보 제 3자 제공에 관한 사항
+                - 개인정보 처리 위탁
+                - 정보주체의 권리, 의무 및 그 행사 방법에 관한 사항
+                - 개인정보 보호책임자에 관한 사항
+                - 이용자 및 정보주체의 권익 침해에 대한 구제 방법 
+               
+              2. 개정시기
+                 - 개정 공지 일자 : 2020.05.25
+                 - 개정 시행 일자 : 2020.06.01
+               
+              <a href="#">3. 개인정보처리방침 확인하기(클릭)</a>
+            </p>
+            <div class="detail_btn">
+              <a href="#" class="link_text">
+                <em class="direction">Prev.</em>
+                <div class="title_box">
+                  <span class="title">[광명센트럴아이파크] 관심고객 5차 발표 안내</span>
+                  <span class="icon_link_arrow"></span>
+                </div>
+              </a>
+              <!--[D] 이전/다음 글이 없는 경우 a태그에 is_disabled 클래스 추가 -->
+              <a href="#" class="link_text is_disabled">
+                <em class="direction">Next.</em>
+                <span class="title">다음글이 없습니다.</span>
+              </a>
+            </div>
+            <a href="#" class="btn_list">목록보기</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

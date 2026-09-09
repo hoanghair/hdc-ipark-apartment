@@ -1,0 +1,9 @@
+<% const id = locals.id || ''; %>
+<% const name = locals.name || ''; %>
+<% const label = locals.label || ''; %>
+<% const checked = locals.checked || false; %>
+
+<div class="box_radio">
+  <input type="radio" id="<%= id %>" name="<%= name %>" class="blind" <%= checked ? 'checked' : '' %> />
+  <label for="<%= id %>" class="label_radio"><%= label %></label>
+</div>

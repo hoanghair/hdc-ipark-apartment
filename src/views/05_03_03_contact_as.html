@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 A/S 안내 | 하자담보책임기간 기준 확인",
+  "listTitle": "A/S 안내 : 고객센터",
+  "metaDesc": "아이파크 A/S 안내를 통해 주택법 및 공동주택관리법의 하자담보책임기간을 확인하실 수 있습니다.",
+  "ogTitle": "아이파크 A/S 안내 | 하자담보책임기간 기준 확인",
+  "ogDesc": "아이파크 A/S 안내를 통해 주택법 및 공동주택관리법의 하자담보책임기간을 한눈에 확인하세요.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'CONTACT', 'A/S 안내'],
+        title: `CONTACT`,
+      })%>
+    <%-include('./include/sub/tab.ejs', {
+      listTab: ['고객센터 안내', '자주묻는 질문', 'A/S 안내', '공지사항'],
+      selectBtn: 'A/S 안내',
+    })%>
+    <div class="contact_content">
+      <section class="sec_contact sec_contact_as">
+        <h2 class="title">공동주택관리법 <br>하자담보 책임기간</h2>
+        <div class="box_content">
+          <div class="category">
+            <!--[D] PC only -->
+            <%-include('./include/select_category.ejs', {
+              id: 'as-category',
+              label: '공사 종류 선택',
+              selectedIndex: 0,
+              options: [
+                '대지조성공사',
+                '옥외급수·위생 관련 공사',
+                '지정 및 기초',
+                '철근콘크리트공사',
+                '철골공사',
+                '조적공사',
+                '목공사',
+                '창호공사',
+                '지붕 및 방수공사',
+                '마감공사',
+                '조경공사',
+                '잡공사',
+                '난방·환기, 공기조화 설비공사',
+                '급·배수위생설비공사',
+                '가스 및 소화설비공사',
+                '전기 및 전력설비공사',
+                '통신·신호 및 방재설비공사',
+                '지능형 홈네트워크 설비공사'
+              ]
+            })%>
+
+            <!--[D] MO only -->
+            <div class="select_category_mo">
+              <select id="as-category-mo" class="select_category_mo_list">
+                <option value="1" class="select_item">대지조성공사</option>
+                <option value="2" class="select_item">옥외급수·위생 관련 공사</option>
+                <option value="3" class="select_item">지정 및 기초</option>
+                <option value="4" class="select_item">철근콘크리트공사</option>
+                <option value="5" class="select_item">철골공사</option>
+                <option value="6" class="select_item">조적공사</option>
+                <option value="7" class="select_item">목공사</option>
+                <option value="8" class="select_item">창호공사</option>
+                <option value="9" class="select_item">지붕 및 방수공사</option>
+                <option value="10" class="select_item">마감공사</option>
+                <option value="11" class="select_item">조경공사</option>
+                <option value="12" class="select_item">잡공사</option>
+                <option value="13" class="select_item">난방·환기, 공기조화 설비공사</option>
+                <option value="14" class="select_item">급·배수위생설비공사</option>
+                <option value="15" class="select_item">가스 및 소화설비공사</option>
+                <option value="16" class="select_item">전기 및 전력설비공사</option>
+                <option value="17" class="select_item">통신·신호 및 방재설비공사</option>
+                <option value="18" class="select_item">지능형 홈네트워크 설비공사</option>
+              </select>
+            </div>
+          </div>
+          <div class="content">
+            <p class="caption_top">
+              <span class="caption_item">○ 주택법 하자담보책임기간</span>
+              <span class="caption_item">★ 공동주택관리법 하자담보책임기간</span>
+            </p>
+            <div class="content_table">
+              <%-include('./include/sub/as_table_content.ejs')%>
+            </div>
+
+            <p class="caption_bottom"> * 준공전, 미·오 시공 하자는 제척기간 5년 적용 자체, 민수 구분없음)</p>
+          </div>
+        </div>
+      </section>
+      <section class="box_banner_app">
+        <div class="inner">
+          <div class="box_cotact">
+            <div class="box_tel">
+              <strong class="title">고객센터 대표번호</strong>
+              <p class="tel">1670-1144</p>
+            </div>
+            <dl class="list_time">
+							<dt class="time_title">평일</dt>
+							<dd class="time_desc">09:00 – 18:00 <br class="only_mo">(점심시간 : 12:00~13:00)</dd>
+							<dt class="time_title">토요일</dt>
+							<dd class="time_desc">09:00 – 13:00</dd>
+							<dt class="time_title">일요일/공휴일</dt>
+							<dd class="time_desc">휴무</dd>
+						</dl>
+          </div>
+          <div class="box_download">
+            <strong class="sub_title">Ipark app</strong>
+            <div class="box_link">
+              <a class="btn_download" href="https://play.google.com/store/apps/details?id=com.hdciparkuserapp" target="_blank" rel="noopener noreferrer">안드로이드 앱 다운로드</a>
+              <a class="btn_download" href="https://apps.apple.com/us/app/%EC%95%84%EC%9D%B4%ED%8C%8C%ED%81%AC-%EB%AA%A8%EB%B0%94%EC%9D%BC/id1516767886" target="_blank" rel="noopener noreferrer">iOS 앱 다운로드</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

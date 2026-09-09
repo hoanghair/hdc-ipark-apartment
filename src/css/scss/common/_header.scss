@@ -1,0 +1,528 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transition: transform 0.3s ease;
+  z-index: 101;
+
+  &.is_hidden {
+    transform: translateY(-100%);
+  }
+
+  &.type_login{
+    border-bottom: 1px solid #B9B9B9;
+  }
+
+  &:before,
+  &:after {
+    visibility: hidden;
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    @include vw-convert-pc(height, 372);
+  }
+
+  &_inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2560px;
+    width: 100%;
+    margin: 0 auto;
+    background: $white;
+    box-sizing: border-box;
+    z-index: 20;
+    transition: background 0.3s ease;
+    @include vw-convert-pc(height, 80);
+    @include vw-convert-pc(padding, (0, 50));
+  }
+
+  .logo {
+    &_link {
+      display: block;
+      @include vw-convert-pc(padding, 10);
+      &:before {
+        content: '';
+        display: block;
+        @include useSvg-icons('logo', 98px);
+      }
+    }
+  }
+
+  &_menu {
+    display: flex;
+    align-items: center;
+    @include vw-convert-pc(gap, 40);
+  }
+
+  &_util {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include vw-convert-pc(min-width, 110);
+
+    .btn_login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $font-black;
+      @include vw-convert-pc(padding, 10);
+      @include vw-font-style-pc(16, 500, 16px);
+    }
+
+    .btn_search {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include vw-convert-pc(padding, 10);
+      &:before {
+        content: '';
+        display: block;
+        @include useSvg-icons('icon_search', 20px);
+      }
+    }
+
+    .btn_logout {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include vw-convert-pc(padding, 10);
+      &:after {
+        content: '';
+        display: block;
+        @include useSvg-icons('icon_logout', 20px);
+      }
+    }
+  }
+
+  .box_search{
+    position: absolute;
+    left: 0;
+    top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: $beige-bg;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+    @include vw-convert-pc(height, 148);
+
+    &.is_show{
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .box_search_input{
+      max-width: 100%;
+      align-items: center;
+      @include vw-convert-pc(width, 584);
+      @include vw-convert-pc(gap, 10);
+      .input{
+        flex: 1;
+        @include vw-font-style-pc(18, 500, 1.3);
+        @include vw-convert-pc(padding, (3, 12, 12));
+      }
+      .btn_search{
+        @include vw-convert-pc(margin-right, 8);
+        @include vw-convert-pc(padding, 4);
+        &:before {
+          content: '';
+          display: block;
+          @include useSvg-icons('icon_search', 20px);
+        }
+      }
+    }
+    .btn_close{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      @include vw-convert-pc(right, 60);
+      &:before {
+        content: '';
+        display: block;
+        @include useSvg-icons('icon_header_close', 44px);
+      }
+    }
+  }
+}
+
+@include breakpoint(desktop) {
+  .header {
+    &.type_main:not(
+        :has(.gnb:hover, .gnb_link:focus-visible, .gnb_depth_link:focus-visible)
+      ) {
+      .header_inner {
+        background: transparent;
+      }
+      .logo {
+        &_link {
+          &:before {
+            @include useSvg-icons('logo_white', 98px);
+          }
+        }
+      }
+      .gnb_link,
+      .gnb_depth_link {
+        color: $white;
+      }
+      .header_util {
+        .btn_login {
+          color: $white;
+        }
+        .btn_search {
+          &:before {
+            @include useSvg-icons('icon_search_white', 20px);
+          }
+        }
+        .btn_logout {
+          &:after {
+            @include useSvg-icons('icon_logout_white', 20px);
+          }
+        }
+      }
+    }
+
+    $types: brands, projects, contact, myipark;
+    @each $type in $types {
+      &:has(
+          .gnb_item[data-type='#{$type}']:hover,
+          .gnb_item[data-type='#{$type}'] .gnb_link:focus-visible,
+          .gnb_item[data-type='#{$type}'] .gnb_depth_link:focus-visible
+        )
+        .nav_info_item[data-type='#{$type}'] {
+        opacity: 1;
+      }
+    }
+
+    &:has(
+        .gnb_item:hover,
+        .gnb_link:focus-visible,
+        .gnb_depth_link:focus-visible
+      ) {
+        &.is_hidden {
+          transform: translateY(0);
+        }
+      .header_inner {
+        background: $beige-bg;
+      }
+
+      &:before {
+        visibility: visible;
+        opacity: 1;
+        height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10;
+      }
+
+      &:after {
+        visibility: visible;
+        background: $beige-bg;
+        opacity: 1;
+        z-index: 10;
+      }
+      .gnb_depth {
+        transition-delay: 0.05s;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .nav_info {
+        visibility: visible;
+      }
+    }
+
+    .gnb {
+      display: flex;
+      align-items: center;
+
+      &_item {
+        position: relative;
+        @include vw-convert-pc(padding, (0, 12));
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 48%;
+          text-decoration-thickness: 8%;
+        }
+      }
+      &_link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $font-black;
+        @include vw-convert-pc(min-width, 128);
+        @include vw-convert-pc(min-height, 36);
+        @include vw-font-style-pc(16, 500, 16px);
+        &.is_active,
+        &:focus-visible {
+          text-decoration: underline;
+          text-underline-offset: 48%;
+          text-decoration-thickness: 8%;
+        }
+      }
+
+      &_depth {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 100%);
+        width: max-content;
+        opacity: 0;
+        pointer-events: none;
+
+        @include vw-convert-pc(min-width, 128);
+        @include vw-convert-pc(min-height, 345);
+        @include vw-convert-pc(padding, (46, 12, 0));
+
+        &_link {
+          display: block;
+          color: $font-black2;
+          @include vw-convert-pc(padding, 8);
+          @include vw-font-style-pc(16, 400, 1.5);
+          &:hover,
+          &.is_active,
+          &:focus-visible {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .nav_info {
+      position: absolute;
+      visibility: hidden;
+      @include vw-convert-pc(left, 60);
+      @include vw-convert-pc(top, 112);
+      &_item {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: max-content;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .box_img {
+        @include vw-convert-pc(width, 432);
+        @include vw-convert-pc(height, 214);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .info_title {
+        display: block;
+        color: $font-black;
+        text-transform: uppercase;
+        @include vw-convert-pc(margin-top, 28);
+        @include vw-font-style-pc(18, 600, 1);
+      }
+      .info_desc {
+        color: $dark-gray;
+        @include vw-convert-pc(margin-top, 6);
+        @include vw-font-style-pc(16, 400, 1);
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .header {
+    &.type_main:not(.is_open) {
+      .header_inner {
+        background: transparent;
+      }
+      .logo {
+        &_link {
+          &:before {
+            @include useSvg-icons-mo('logo_white', 78px);
+          }
+        }
+      }
+      .header_util {
+        .btn_search {
+          &:before {
+            @include useSvg-icons-mo('icon_search_white_mo', 36px);
+          }
+        }
+        .btn_menu {
+          .bar {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    &.is_open {
+      .header_inner {
+        background: $beige-bg;
+      }
+      .header_util {
+        .btn_login,
+        .btn_logout {
+          display: flex;
+          text-transform: uppercase;
+          gap: 10px;
+          position: fixed;
+          left: 10px;
+          bottom: 20px;
+          z-index: 10;
+          font-size: 18px;
+          font-weight: 500;
+          color: $font-black;
+          padding: 10px;
+        }
+
+        .btn_logout {
+          &:after {
+            @include useSvg-icons-mo('icon_logout', 18px);
+          }
+        }
+      }
+      .nav {
+        position: fixed;
+        display: block;
+        top: 60px;
+        left: 0;
+        background: $beige-bg;
+        width: 100%;
+        height: calc(100dvh - 60px);
+        z-index: 10;
+        padding: 52px 20px;
+        box-sizing: border-box;
+      }
+      .gnb {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        &_link {
+          justify-content: flex-start;
+          width: 100%;
+          font-size: 30px;
+          line-height: 1;
+          font-weight: 400;
+        }
+      }
+    }
+    &_inner {
+      height: 60px;
+      padding: 0 20px 0 10px;
+    }
+    .logo_link {
+      padding: 10px 10px;
+      &:before {
+        @include useSvg-icons-mo('logo', 78px);
+      }
+    }
+    .nav {
+      display: none;
+    }
+
+    .gnb {
+      &_link {
+        color: $font-black;
+        &.is_open {
+          text-decoration: none;
+          & ~ .gnb_depth {
+            display: flex;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+      }
+      &_depth {
+        display: none;
+        padding: 16px 0 10px;
+        position: relative;
+        flex-direction: column;
+        gap: 6px;
+        &_link {
+          font-size: 16px;
+          color: $font-black;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .header_util {
+      gap: 10px;
+      .btn_search {
+        padding: 0;
+        &:before {
+          @include useSvg-icons-mo('icon_search_mo', 36px);
+        }
+      }
+
+      .btn_menu {
+        display: block;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        .bar {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          display: block;
+          width: 26px;
+          height: 1px;
+          background-color: $font-black;
+          transition: top 0.3s ease;
+          &:first-of-type {
+            top: calc(50% - 4px);
+          }
+          &:nth-of-type(2) {
+            top: calc(50% + 4px);
+          }
+        }
+      }
+
+      .btn_login,
+      .btn_logout {
+        display: none;
+      }
+    }
+
+    .box_search{
+      height: 136px;
+      padding: 36px 20px 20px;
+      box-sizing: border-box;
+      .box_search_input{
+        width: 100%;
+        gap: 10px;
+        .input{
+          padding: 3px 10px 8px;
+          font-size: 16px;
+          letter-spacing: -0.02em;
+        }
+        .btn_search{
+          padding:  0 10px 6px 8px;
+          margin-right: 0;
+          &:before {
+            @include useSvg-icons-mo('icon_search_small_mo', 30px);
+          }
+        }
+      }
+      .btn_close{
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        transform: translateY(0);
+        &:before {
+          content: '';
+          display: block;
+          @include useSvg-icons-mo('icon_header_close_mo', 24px);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<% const id = locals.id || ''; %>
+<% const name = locals.name || ''; %>
+<% const value = locals.value || ''; %>
+<% const label = locals.label || ''; %>
+<% const checked = locals.checked || false; %>
+<% const className = locals.className || ''; %>
+
+
+<div class="box_checkbox">
+  <input type="checkbox" id="<%= id %>" name="<%= name %>" value="<%= value %>" class="blind <%= className %>" <%= checked ? 'checked' : '' %> />
+  <label for="<%= id %>" class="label_checkbox"><%= label %></label>
+</div>

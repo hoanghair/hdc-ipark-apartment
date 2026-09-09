@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "브랜드 스토리 : 브랜드",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"아이파크 | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"아이파크는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'BRANDS', '브랜드 스토리'],
+        title: `BRAND <br class="only_mo">STORY`,
+        subTitle: 'IPARK는 삶의 방식을 그립니다.',
+        desc: `IPARK는 삶의 흐름이 변화하는 시대 속에서 주거, 도시, 리테일, 레저, 스포츠, 문화 등<br>
+다양한 영역을 넘나들며 주거를 중심으로 도시와 일상, 다양한 경험의 장면들을 하나로 이어갑니다.`,
+        
+      })%>
+      
+      <div class="brand_content">
+        <section class="sec_brand sec_brand_life">
+          <div class="box_title_top">
+						<div class="box_left animate_auto">
+							<p class="eyebrow">Life in Transition</p>
+							<h2 class="title">공간에서 문화까지,<br>
+                일상에서 경험까지</h2>
+						</div>
+						<p class="desc animate_auto type_delay">삶은 하나의 공간에 머물지 않습니다.<br>
+              일과 휴식, 관계와 시간, 기술과 감정이 자연스럽게 이어지며 하나의 경험이 됩니다.<br>
+              우리는 이 변화 속에서 삶을 하나의 흐름으로 이해할 수 있는 새로운 기준이 필요하다고 생각했습니다.<br>
+              IPARK는 그 흐름을 이해하고 삶의 경험을 담는 라이프스타일 브랜드입니다.<br>
+              IPARK는 이제 주거 브랜드를 넘어, 고객의 일상에 가장 가까운 HDC LIFE 영역의 비전을
+              연결하는 ‘세계관’ 입니다.</p>
+					</div>
+        </section>
+        <section class="sec_brand sec_brand_core">
+          <div class="inner">
+            <div class="box_title animate">
+              <p class="eyebrow">Core of Life Experience</p>
+              <h2 class="title">삶의 장면을 연결하는 하나의 경험</h2>  
+              <div class="box_brand_tab" role="tablist" aria-label="브랜드 영역 선택">
+                <button type="button" class="btn_brand_tab is_active" role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1">주거 · 도시</button>
+                <button type="button" class="btn_brand_tab" role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2">레저</button>
+                <button type="button" class="btn_brand_tab" role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3">스포츠</button>
+                <button type="button" class="btn_brand_tab" role="tab" aria-selected="false" aria-controls="panel-4" id="tab-4">리테일</button>
+              </div>
+            </div>
+            <div class="box_content ">
+              <div class="box_panel is_show" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                <div class="box_left">
+                  <ul class="list_hash animate">
+                    <li class="item_hash">IPARK현대산업개발</li>
+                    <li class="item_hash">IPARK아이앤콘스</li>
+                    <li class="item_hash">IPARK마리나</li>
+                  </ul>
+                  <div class="box_sub_img animate">
+                    <img src="../img/brand/img_brand_core_sub_1.jpg" alt="">
+                  </div>
+                  <strong class="item_title animate" data-position="top 90%">일상을 담는 삶의 기반,<br>
+                    주거 · 공간 · 도시를 설계하고 구현합니다.</strong>
+                </div>
+                <div class="box_main_img">
+                  <img src="../img/brand/img_brand_core_main_1.jpg" alt="">
+                </div>
+              </div>
+              <div class="box_panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" >
+                <div class="box_left">
+                  <ul class="list_hash">
+                    <li class="item_hash">호텔IPARK</li>
+                    <li class="item_hash">IPARK리조트</li>
+                    <li class="item_hash">IPARK마리나</li>
+                  </ul>
+                  <div class="box_sub_img">
+                    <img src="../img/brand/img_brand_core_sub_2.jpg" alt="">
+                  </div>
+                  <strong class="item_title">단순한 시설이 아닌 삶에 활력을 불어넣는<br>
+                    여가와 휴식으로 감각적 경험과 감동을 전합니다.</strong>
+                </div>
+                <div class="box_main_img">
+                  <img src="../img/brand/img_brand_core_main_2.jpg" alt="">
+                </div>
+              </div>
+              <div class="box_panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" >
+                <div class="box_left">
+                  <ul class="list_hash">
+                    <li class="item_hash">IPARK스포츠</li>
+                  </ul>
+                  <div class="box_sub_img">
+                    <img src="../img/brand/img_brand_core_sub_3.jpg" alt="">
+                  </div>
+                  <strong class="item_title">일상의 활력과 즐거움을 전하며,<br>
+                    건강한 삶의 리듬과 교감을 더합니다.</strong>
+                </div>
+                <div class="box_main_img">
+                  <img src="../img/brand/img_brand_core_main_3.jpg" alt="">
+                </div>
+              </div>
+              <div class="box_panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" >
+                <div class="box_left">
+                  <ul class="list_hash">
+                    <li class="item_hash">IPARK몰</li>
+                    <li class="item_hash">IPARK신라면세점</li>
+                    <li class="item_hash">IPARK영창</li>
+                  </ul>
+                  <div class="box_sub_img">
+                    <img src="../img/brand/img_brand_core_sub_4.jpg" alt="">
+                  </div>
+                  <strong class="item_title">쇼핑을 넘어 생활 속 <br class="only_mo">새로운 감각의 체험을 통해<br class="only_pc">
+                    다양한 취향과 라이프스타일을 제시합니다.</strong>
+                </div>
+                <div class="box_main_img">
+                  <img src="../img/brand/img_brand_core_main_4.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sec_brand sec_brand_essense">
+          <div class="inner">
+            <div class="box_text ">
+              <p class="eyebrow animate">Brand Identity</p>
+              <h2 class="title animate">Visionary<br>
+                Life Creator</h2> 
+              <p class="sub_title animate">삶의 비전을 설계하는 창조자</p>
+              <p class="desc animate">IPARK는 도시와 일상을 새롭게 디자인하여,<br>
+                사람들의 삶을 더욱 풍부하고 감각적인<br>
+                경험으로 채우며 <br>
+                ‘더 나은 삶의 형식(Form of Better Life)’을<br>
+                실현합니다.</p>
+            </div>
+            <div class="box_img">
+              <div class="img_inner">
+                <img src="../img/brand/img_brand_essense.jpg" alt="" class="only_pc">
+                <img src="../img/brand/img_brand_essense_mo.jpg" alt="" class="only_mo">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="sec_brand sec_brand_story">
+          <div class="box_title_top">
+            <div class="box_left animate">
+              <p class="eyebrow">Brand Story</p>
+              <h2 class="title">더 나은 삶의 형식을 위한<br>
+                IPARK의 이야기</h2> 
+            </div>
+            <p class="desc animate" data-position="top 70%">“더 나은 삶의 형식(Form of Better Life)”은 삶의 기반을 이루는 공간, 도시, 문화, 경험이<br>
+              사람들의 일상과 장면, 도시의 흐름 속에서 하나로 연결되는 상태를 의미합니다.<br><br>
+              
+              이는 곧 삶을 담는 물리적 공간(주거, 도시, 건축)과 삶을 풍요롭게 만드는 문화적 경험(예술, 자연, 
+              커뮤니티)이 분리되지 않고 어우러져 구현되는 Integrated Life Experience입니다.<br>
+              Integrated Life Experience는 현재와 미래를 잇는 다리입니다.
+              오늘의 생활에 편안함과 안정을 주는 동시에, 내일의 도시와 사회가 요구하는 지속가능성, 혁신,
+              포용성을 함께 담습니다.<br><br>
+              
+              따라서 “더 나은 삶”은 단순한 미래의 목표가 아니라, 과거와 현재, 그리고 미래의 유산까지 이어가는 진화의 미션입니다.
+              또한 이는 인간적 감각과 도시적 비전이 만나 삶의 근간이 되는 지점입니다.<br><br>
+              
+              집 안에 들어오는 빛과 바람, 움직임의 편안함 같은 개인의 하루의 감각이 도시 전체의 교통, 환경,
+              커뮤니티, 문화 네트워크와 자연스럽게 맞물릴 때 비로소 완성되는 Form of Better Life는<br>
+              가장 인간적이고 풍요로운 삶의 형식입니다.</p>
+          </div>
+          <div class="box_img animate">
+            <img src="../img/brand/img_brand_story.jpg" alt="" class="only_pc">
+            <img src="../img/brand/img_brand_story_mo.jpg" alt="" class="only_mo">
+          </div>
+        </section>
+        <section class="sec_brand sec_brand_value">
+          <div class="inner">
+            <div class="box_title animate">
+              <p class="eyebrow">Brand Principle</p>
+              <h2 class="title">비전을 현실로 <br class="only_mo">바꾸는 기준</h2> 
+            </div>
+            <ul class="list_value">
+              <li class="item_value animate">
+                <canvas id="driven" class="box_img lottie" data-src="../img/brand/driven.lottie"></canvas>
+                <strong class="item_title">깊은 이해에서 시작되는<br>
+                  더 나은 일상</strong>
+                  <p class="item_desc">IPARK는 삶의 장면을 깊이 <br class="only_mo">이해하는 것에서 출발합니다.<br>
+                    작은 불편을 줄이고, 반복되는 순간을 <br class="only_mo">더 편안하게<br class="only_pc">
+                    만드는 기준은 <br class="only_mo">일상의 일부가 됩니다.</p>
+              </li>
+              <li class="item_value animate ">
+                <canvas id="inspired" class="box_img lottie" data-src="../img/brand/inspired.lottie"></canvas>
+                <strong class="item_title">삶의 순간을 하나의 흐름으로<br>
+                  바라보는 시선</strong>
+                  <p class="item_desc">운동과 휴식, 혼자만의 시간과 <br class="only_mo">함께하는 시간, <br >도시와 여가의 경계를 나누지 않고<br>
+                    하나의 흐름으로 이어 봅니다.</p>
+              </li>
+              <li class="item_value animate">
+                <canvas id="powered" class="box_img lottie" data-src="../img/brand/powered.lottie"></canvas>
+                <strong class="item_title">생각을 경험으로 잇는<br>
+                  분명한 힘</strong>
+                  <p class="item_desc">IPARK가 제안하는 삶의 방식은<br>
+                    말에 머무르지 않습니다. <br class="only_mo">일상의 장면 속에서,<br>
+                    가장 분명한 변화로 이어집니다.</p>
+              </li>
+              <li class="item_value animate">
+                <canvas id="rooted" class="box_img lottie" data-src="../img/brand/rooted.lottie"></canvas>
+                <strong class="item_title">사람과 사회를<br>
+                  중심에 두는 태도</strong>
+                  <p class="item_desc">속도와 취향, 각자의 리듬을 존중하는 <br class="only_mo">것에서 시작해<br class="only_pc">
+                    누구에게나 같은 삶이 아닌, <br class="only_mo">각자의 방식이<br class="only_pc">
+                    자연스럽게 <br class="only_mo">존중 받는 경험을 지향합니다.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

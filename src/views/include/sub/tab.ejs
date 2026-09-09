@@ -1,0 +1,16 @@
+<% const listTab = locals.listTab || []; %>
+<% const selectBtn = locals.selectBtn || ''; %>
+
+<nav class="box_tab" aria-label="서브 메뉴">
+  <button type="button" class="btn_select_tab only_mo" aria-expanded="false"><%= selectBtn %></button>
+  <ul class="list_tab" role="tablist">
+    <!-- [D] 활설화 시 btn_tab에 is_active 추가 -->
+    <% if (listTab && listTab.length > 0) { %>
+      <% listTab.forEach(item => { %>
+        <li class="item_tab" role="presentation">
+          <a href="#" class="btn_tab <%= selectBtn === item ? 'is_active' : '' %>" role="tab" aria-selected="<%= selectBtn === item ? 'true' : 'false' %>"><%= item %></a>
+          </li>
+      <% }) %>
+    <% } %>
+  </ul>
+</nav>

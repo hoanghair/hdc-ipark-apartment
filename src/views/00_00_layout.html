@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK Layout", 
+  "listTitle": "Layout(로그인 후) : Common",
+  "metaDesc":"IPARK Layout",
+  "ogTitle":"IPARK Layout",
+  "ogDesc":"IPARK Layout",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body data-pagestatus="new : 2026-01-26">
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+  
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

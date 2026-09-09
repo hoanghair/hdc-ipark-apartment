@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK Components", 
+  "listTitle": "Components : Common",
+  "metaDesc":"IPARK Components",
+  "ogTitle":"IPARK Components",
+  "ogDesc":"IPARK Components",
+  "ogImage":"IPARK Components",
+  })%>
+<style>
+.components_wrap {
+  background: #f5f5f5;
+}
+
+.components_container {
+  padding: 80px 60px;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sec_components {
+  margin-bottom: 100px;
+}
+
+.sec_components .category_title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #212121;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(33, 33, 33, 0.08);
+}
+
+.box_component {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 1px solid #e8e8e8;
+}
+
+.component_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.component_title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
+}
+
+.component_file_path {
+  font-size: 12px;
+  color: #888;
+  background: #f0f0f0;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+.component_example {
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 28px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+.code_wrapper {
+  position: relative;
+}
+
+.code_label {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: #1e1e1e;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 4px 4px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.btn_copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #2d2d2d;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.btn_copy:hover {
+  background: #3d3d3d;
+}
+
+.btn_copy_success {
+  background: #4caf50 !important;
+}
+
+.component_code {
+  background: #1e1e1e;
+  padding: 24px;
+  padding-right: 80px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border-top: 2px solid #2d2d2d;
+}
+
+.component_code pre {
+  margin: 0;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.component_code code {
+  color: #d4d4d4;
+}
+</style>
+<body data-pagestatus="new : 2026-01-26">
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap components_wrap">
+    <!-- Contents -->
+    <main class="container components_container" id="content">
+      <!-- Button -->
+      <section class="sec_components">
+        <h2 class="category_title">Button</h2>
+        
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Link</h3>
+            <span class="component_file_path">button/link.ejs</span>
+          </div>
+          <div class="component_example">
+            <%-include('./include/button/link.ejs', {
+              href: '#',
+              text: '링크 텍스트',
+            })%>
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-link', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-link"><code>&lt;%-include('./include/button/link.ejs', {
+  href: '#',
+  text: '링크 텍스트',
+  className: '', // 선택사항
+  target: '_blank' // 선택사항
+})%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Kakao Button</h3>
+            <span class="component_file_path">button/btn_kakao.ejs</span>
+          </div>
+          <div class="component_example">
+            <%-include('./include/button/btn_kakao.ejs')%>
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-kakao', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-kakao"><code>&lt;%-include('./include/button/btn_kakao.ejs')%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smaple -->
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Sample Title</h3>
+            <span class="component_file_path">sample/sample.ejs</span>
+          </div>
+          <div class="component_example">
+            <!-- 샘플 EJS -->
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-kakao', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-kakao"><code>&lt;%-include('./include/sample/sample.ejs')%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- //Smaple -->
+      </section>
+      <!-- // Button -->
+            <!-- Sub 공통 -->
+      <section class="sec_components">
+        <h2 class="category_title">Sub Common</h2>
+        
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Sub KV</h3>
+            <span class="component_file_path">sub/sec_sub_kv.ejs</span>
+          </div>
+          <div class="component_example">
+            <%-include('./include/sub/sec_sub_kv.ejs', {
+              breadcrumb: ['HOME', 'BRANDS', '브랜드 스토리'],
+              title: 'BRAND STORY',
+              img: '../img/brand/img_brand_story_kv.jpg',
+              subTitle: '주거 공간에서 라이프스타일 플랫폼으로, IPARK',
+              desc: `IPARK는 공간 안에서 펼쳐지는 일상과 삶의 흐름을 먼저 고민해 왔습니다.<br>
+              IPARK가 만들어온 것은 주거공간 그 자체가 아니라, 삶이 어떻게 확장되는지를 바라보는 관점입니다.<br>
+              공간을 넘어 삶의 경험을 제안하는 라이프스타일 플랫폼, IPARK입니다.`,
+            })%>
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-link', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-link"><code>&lt;%-include('./include/button/link.ejs', {
+  breadcrumb: ['HOME', 'BRANDS', '브랜드 스토리'],
+  title: 'BRAND STORY',
+  img: '../img/brand/img_brand_story_kv.jpg',
+  subTitle: '주거 공간에서 라이프스타일 플랫폼으로, IPARK',
+  desc: `IPARK는 공간 안에서 펼쳐지는 일상과 삶의 흐름을 먼저 고민해 왔습니다.<br>
+  IPARK가 만들어온 것은 주거공간 그 자체가 아니라, 삶이 어떻게 확장되는지를 바라보는 관점입니다.<br>
+  공간을 넘어 삶의 경험을 제안하는 라이프스타일 플랫폼, IPARK입니다.`,
+})%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Sub KV(No Image)</h3>
+            <span class="component_file_path">sub/sec_sub_kv.ejs</span>
+          </div>
+          <div class="component_example">
+            <%-include('./include/sub/sec_sub_kv.ejs', {
+              breadcrumb: ['HOME', 'BRANDS', '브랜드 스토리'],
+              title: 'BRAND STORY',
+            })%>
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-link', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-link"><code>&lt;%-include('./include/button/link.ejs', {
+  breadcrumb: ['HOME', 'BRANDS', '브랜드 스토리'],
+  title: 'BRAND STORY',
+})%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Smaple -->
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Sample Title</h3>
+            <span class="component_file_path">sample/sample.ejs</span>
+          </div>
+          <div class="component_example">
+            <!-- 샘플 EJS -->
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-kakao', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-kakao"><code>&lt;%-include('./include/sample/sample.ejs')%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- //Smaple -->
+      </section>
+      <!-- // Button -->
+    </main>
+    <!-- // Contents -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+<script>
+function copyCode(id, btnElement) {
+  const codeElement = document.getElementById(id);
+  const code = codeElement.textContent || codeElement.innerText;
+  const btn = btnElement;
+  const originalText = btn.textContent;
+  
+  // Clipboard API 사용 (최신 브라우저)
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(code).then(function() {
+      btn.textContent = '복사됨!';
+      btn.classList.add('btn_copy_success');
+      
+      setTimeout(function() {
+        btn.textContent = originalText;
+        btn.classList.remove('btn_copy_success');
+      }, 2000);
+    }).catch(function(err) {
+      // Clipboard API 실패 시 fallback 사용
+      fallbackCopy(code, btn, originalText);
+    });
+  } else {
+    // 구형 브라우저용 fallback
+    fallbackCopy(code, btn, originalText);
+  }
+}
+
+function fallbackCopy(code, btn, originalText) {
+  const textArea = document.createElement('textarea');
+  textArea.value = code;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-9999px';
+  textArea.style.top = '0';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  
+  try {
+    const successful = document.execCommand('copy');
+    if (successful) {
+      btn.textContent = '복사됨!';
+      btn.classList.add('btn_copy_success');
+      setTimeout(function() {
+        btn.textContent = originalText;
+        btn.classList.remove('btn_copy_success');
+      }, 2000);
+    } else {
+      console.error('복사 명령 실행 실패');
+    }
+  } catch (err) {
+    console.error('복사 중 오류 발생:', err);
+  }
+  
+  document.body.removeChild(textArea);
+}
+</script>
+</body>
+</html>

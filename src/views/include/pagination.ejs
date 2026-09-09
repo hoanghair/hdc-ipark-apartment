@@ -1,0 +1,33 @@
+<% const totalPages = locals.totalPages || 5; %>
+<% const currentPage = locals.currentPage || 1; %>
+
+<nav class="pagination" aria-label="pagination">
+  <ul class="list_pagination">
+    <li class="item_pagination item_pagination_first">
+      <!--[D] 비활성화 시 btn_pagination에 is_disabled 추가 (button 태그의 경우 disabled 속성 추가 필요)-->
+      <button type="button" class="btn_pagination">
+        <span class="blind">첫 페이지</span>
+      </button>
+    </li>
+    <li class="item_pagination item_pagination_prev">
+      <button type="button" class="btn_pagination">
+        <span class="blind">이전 페이지</span>
+      </button>
+    </li>
+    <% for (let i = 1; i <= totalPages; i++) { %>
+    <li class="item_pagination">
+      <a href="#" class="btn_pagination"<%- i === currentPage ? ' aria-current="page"' : '' %>><%= i %></a>
+    </li>
+    <% } %>
+    <li class="item_pagination item_pagination_next">
+      <button type="button" class="btn_pagination">
+        <span class="blind">다음 페이지</span>
+      </button>
+    </li>
+    <li class="item_pagination item_pagination_last">
+      <button type="button" class="btn_pagination">
+        <span class="blind">마지막 페이지</span>
+      </button>
+    </li>
+  </ul>
+</nav>

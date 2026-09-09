@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "IPARK | 주거를 넘어 삶을 설계하는 브랜드", 
+  "listTitle": "나의 정보 조회 - 연체 · 할인 계산기 : 마이 아이파크",
+  "metaDesc":"IPARK는 주거를 넘어 삶의 경험을 연결하며, 삶의 방식을 설계하는 라이프스타일 플랫폼 브랜드입니다.",
+  "ogTitle":"IPARK | 주거를 넘어 삶을 설계하다",
+  "ogDesc":"IPARK는 공간을 넘어 삶의 경험을 연결하며, 라이프스타일의 미래 비전을 제안합니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'MY IPARK', '나의 정보 조회'],
+        title: `MY IPARK`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['나의 정보 조회', '나의 관심 단지', '1:1 문의', '회원 정보 수정'],
+        selectBtn: '나의 정보 조회',
+      })%>
+      <%-include('./include/sub/tab_detail.ejs', {
+        listTab: ['계약 안내', '분양대금 조회', '연체·할인 계산기',  '입주안내'],
+        selectBtn: '계약 안내',
+        activeIndex: 0,
+      })%>
+      <div class="my_content">
+        <section class="sec_my sec_my_agreement_list">
+          <h2 class="title type_small"><em class="highlight">정아이</em>님의 <br class="only_mo">아이파크 <em class="highlight">연체 · 할인 예상 금액</em>를 알려드립니다.</h2>
+          <div class="box_content">
+            <strong class="content_title">
+              <em class="highlight">정아이</em>님의 계약 단지
+            </strong>
+            <%-include('./include/select/select_my.ejs', {
+              label: '단지명',
+              selectText: '꿀단지0101동 0501호',
+              selectList: ['꿀단지0101동 0501호', '꿀단지0101동 0502호', '꿀단지0101동 0503호'],
+            })%>
+          </div>
+        </section>
+        <section class="sec_my sec_my_calculate">
+          <h2 class="title">예상 금액 입력</h2>
+          <p class="required_desc">항목은 필수 입력 항목입니다. </p>
+          <div class="box_content box_layout_right">
+            <form class="form_calculate">
+              <div class="box_row">
+                <%-include('./include/select/select.ejs', {
+                  label: '금액 구분',
+                  selectText: '분양',
+                  selectList: ['분양', '옵션'],
+                })%>
+                <div class="box_datepicker box_input">
+                  <span class="label is_required">예상 금액 일자</span>
+                  <input type="text" id="datepicker" class="input" placeholder="날짜를 입력해주세요.">
+                </div>
+              </div>
+              <div class="box_row type_column">
+                <span class="label is_required">예상 금액 입력</span>
+                <div class="box_calc_price">
+                  <div class="item_calc_price">
+                    <%-include('./include/input/radio.ejs', {
+                      id: 'calc_price_1',
+                      name: 'calc_price',
+                      label: '예상 입금 차수',
+                      checked: true,
+                    })%>
+                    <%-include('./include/select/select.ejs', {
+                      selectText: '계약금1차',
+                      selectList: ['계약금1차', '계약금2차', '중도금1차', '중도금2차', '중도금3차', '중도금4차'],
+                    })%>
+                  </div>
+                  <div class="item_calc_price">
+                    <%-include('./include/input/radio.ejs', {
+                      id: 'calc_price_2',
+                      name: 'calc_price',
+                      label: '예상 입금액',
+                    })%>
+                    <%-include('./include/input/input.ejs', {
+                      type: 'number',
+                      id: 'calc_price_3',
+                      name: 'calc_price',
+                      placeholder: '금액을 입력해주세요.',
+                    })%>
+                  </div>
+                </div>
+              </div>
+              <div class="box_btn">
+                <%-include('./include/button/btn.ejs', {
+                  className: 'type_secondary',
+                  text: '초기화',
+                })%>
+                <%-include('./include/button/btn.ejs', {
+                  text: '계산 결과 보기',
+                })%>
+              </div>
+            </form>
+            <div class="box_result_content">
+              <span class="label">예상 연체 · 할인 금액</span>
+              <div class="box_result_none">
+                <strong class="result_title">예상 연체 · 할인 금액을 확인할 수 없습니다.</strong>
+                <p class="result_desc">예상 금액을 입력 후 '계산 결과 보기'를 클릭해 주세요!</p>
+              </div>
+              <div class="box_result" style="display: none;">
+                <div class="box_table">
+                  <table class="table_my type_small">
+                    <thead>
+                      <tr>
+                        <th>입금구분</th>
+                        <th>약정일자</th>
+                        <th>약정금액</th>
+                        <th data-label="실입금액"  class="is_hidden">실입금액</th>
+                        <th data-label="일수"  class="is_hidden">일수</th>
+                        <th data-label="연체료"  class="is_hidden">연체료</th>
+                        <th data-label="할인료"  class="is_hidden">할인료</th>
+                        <th data-label="예상입금"  class="is_hidden">예상입금</th>
+                      </tr>                
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>계약금1차</td>
+                        <td>2021-10-23</td>
+                        <td>10,000,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">0</td>
+                        <td data-label="연체료"  class="is_hidden">0</td>
+                        <td data-label="할인료"  class="is_hidden">0</td>
+                        <td data-label="예상입금"  class="is_hidden">10,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>계약금2차</td>
+                        <td>2021-10-23</td>
+                        <td>14,100,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">0</td>
+                        <td data-label="연체료"  class="is_hidden">0</td>
+                        <td data-label="할인료"  class="is_hidden">0</td>
+                        <td data-label="예상입금"  class="is_hidden">14,100,000</td>
+                      </tr>
+                      <tr>
+                        <td>중도금1차</td>
+                        <td>2021-10-23</td>
+                        <td>24,100,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">2,464</td>
+                        <td data-label="연체료"  class="is_hidden">10,233,200</td>
+                        <td data-label="할인료"  class="is_hidden">0</td>
+                        <td data-label="예상입금"  class="is_hidden">34,333,200</td>
+                      </tr>
+                      <tr>
+                        <td>중도금2차</td>
+                        <td>2021-10-23</td>
+                        <td>24,100,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">2,341</td>
+                        <td data-label="연체료"  class="is_hidden">9,722,400</td>
+                        <td data-label="할인료"  class="is_hidden">0</td>
+                        <td data-label="예상입금"  class="is_hidden">33,822,400</td>
+                      </tr>
+                      <tr>
+                        <td>중도금3차</td>
+                        <td>2021-10-23</td>
+                        <td>10,000,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">-</td>
+                        <td data-label="연체료"  class="is_hidden">-</td>
+                        <td data-label="할인료"  class="is_hidden">-</td>
+                        <td data-label="예상입금"  class="is_hidden">0</td>
+                      </tr>
+                      <tr>
+                        <td>중도금4차</td>
+                        <td>2021-10-23</td>
+                        <td>10,000,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">-</td>
+                        <td data-label="연체료"  class="is_hidden">-</td>
+                        <td data-label="할인료"  class="is_hidden">-</td>
+                        <td data-label="예상입금"  class="is_hidden">0</td>
+                      </tr>
+                      <tr>
+                        <td>잔금</td>
+                        <td>2021-10-23</td>
+                        <td>120,500,000</td>
+                        <td data-label="실입금액"  class="is_hidden">0</td>
+                        <td data-label="일수"  class="is_hidden">-</td>
+                        <td data-label="연체료"  class="is_hidden">-</td>
+                        <td data-label="할인료"  class="is_hidden">-</td>
+                        <td data-label="예상입금"  class="is_hidden">-</td>
+                      </tr>
+
+                      <tr class="total">
+                        <td>합계</td>
+                        <td>2022-12-31</td>
+                        <td>241,000,000</td>
+                        <td data-label="실입금액" class="is_hidden">0</td>
+                        <td data-label="일수" class="is_hidden">2,464</td>
+                        <td data-label="연체료" class="is_hidden">19,955,600</td>
+                        <td data-label="할인료" class="is_hidden">0</td>
+                        <td data-label="예상입금" class="is_hidden">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="box_option only_mo">
+                  <%-include('./include/input/checkbox.ejs', {
+                    id: 'option_all',
+                    className: 'option_all',
+                    name: 'option',
+                    value:'전체',
+                    label: '전체',
+                  })%>
+                  <%-include('./include/input/checkbox.ejs', {
+                    id: 'option_2',
+                    name: 'option',
+                    value:'연체료',
+                    label: '연체료',
+                  })%>
+                  <%-include('./include/input/checkbox.ejs', {
+                    id: 'option_3',
+                    name: 'option',
+                    value:'실입금액',
+                    label: '실입금액',
+                  })%>
+                  <%-include('./include/input/checkbox.ejs', {
+                    id: 'option_4',
+                    name: 'option',
+                    value:'할인료',
+                    label: '할인료',
+                  })%>
+                  <%-include('./include/input/checkbox.ejs', {
+                    id: 'option_6',
+                    name: 'option',
+                    value:'일수',
+                    label: '일수',
+                  })%>
+                  <%-include('./include/input/checkbox.ejs', {
+                    id: 'option_5',
+                    name: 'option',
+                    value:'예상입금',
+                    label: '예상입금',
+                  })%>
+                  
+                </div>
+                <table class="table_row">
+                  <thead>
+                    <tr>
+                      <th>예상연체료</th>
+                      <th>예상할인료</th>
+                      <th>예상실입금액</th>
+                      <th>예상입금액</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="예상연체료">19,955,600</td>
+                      <td data-label="예상할인료">-</td>
+                      <td data-label="예상실입금액">-</td>
+                      <td data-label="예상입금액">72,300,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <%-include('./include/banner/banner_app.ejs')%>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+<!-- [D] 마크업 검수용, 개발제외 -->
+<style>
+  .caseview{
+    position: fixed; right: 0; bottom: 0;background: rgba(0,0,0,0.5);
+    z-index: 10000;
+  }
+  .btn_caseview{
+    font-size: 14px; color: yellow;padding: 10px;width: 100%;
+  }
+  .list_caseview{
+    display: none; flex-direction: column; gap: 10px;text-align: left;align-items: flex-start;padding: 10px;
+  }
+  .list_caseview.is_show{
+    display: flex;
+  }
+  .btn_caseview_item{
+    font-size: 14px; color: #fff;width: 100%;
+    text-align: left;
+  }
+ </style>
+<div class="caseview">
+  <button type="button" class="btn_caseview">Caseview Toogle</button>
+  <div class="list_caseview">
+    <button type="button" class="btn_caseview_item" onClick="document.querySelector('.box_result').style.display = 'block';document.querySelector('.box_result_none').style.display = 'none';">계산 결과 보기</button>
+  </div>
+</div>
+<script>
+   document.querySelector('.btn_caseview').addEventListener('click', function() {
+    document.querySelector('.list_caseview').classList.toggle('is_show');
+  });
+
+</script>
+<!-- // [D] 마크업 검수용, 개발제외 -->
+</body>
+</html>

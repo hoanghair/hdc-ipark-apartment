@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <%-include('./include/layout/head.ejs',{
+    "title": "IPARK | 방문예약",
+    "listTitle": "방문예약 - 예약신청 완료 : 기타페이지",
+    "metaDesc":"아이파크의 차별화된 주거 공간을 직접 경험해 보세요. 편안한 관람과 전문 상담을 위해 원하시는 일정으로 방문을 예약하실 수 있습니다.",
+    "ogTitle":"IPARK | 방문예약",
+    "ogDesc":"아이파크의 차별화된 주거 공간을 직접 경험해 보세요. 편안한 관람과 전문 상담을 위해 원하시는 일정으로 방문을 예약하실 수 있습니다.",
+    "ogImage":"../img/common/ipark-og-image.jpg",
+    })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs', {
+      status: 'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        title: `RESERVATION`,
+        hasBreadcrumb: false,
+      })%>
+      <div class="reservation_content">
+        <section class="sec_reservation">
+          <h2 class="title">개포 디에이치 퍼스티어 아이파크</h2>
+          <h3 class="sub_title">정아이님의 일반분양 중도금 대출 자서 예약 사항입니다.</h3>
+          <div class="box_content box_layout_right">
+            <div class="box_sub_content">
+              <div class="box_user_info">
+                <dl class="list_user_info">
+                  <div class="item_user_info">
+                    <dt class="item_title">이름</dt>
+                    <dd class="item_desc">정아이</dd>
+                  </div>
+                  <div class="item_user_info">
+                    <dt class="item_title">생년월일</dt>
+                    <dd class="item_desc">YYYY.MM.DD</dd>
+                  </div>
+                  <div class="item_user_info">
+                    <dt class="item_title">휴대폰 번호</dt>
+                    <dd class="item_desc">010-0000-0000</dd>
+                  </div>
+                  <div class="item_user_info">
+                    <dt class="item_title">예약일시</dt>
+                    <dd class="item_desc">YYYY년 MM월 DD일 HH:MM~HH:MM</dd>
+                  </div>
+                  <div class="item_user_info type_address">
+                    <dt class="item_title">모델하우스 주소</dt>
+                    <dd class="item_desc">충남 음성군 맹동면 두성리 1124
+                    <%-include('./include/button/btn.ejs', {
+                      text: '지도보기',
+                      className: 'type_secondary type_small',
+                    })%>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="box_btn_area type_grid">
+                <div class="box_btn">
+                  <%-include('./include/button/btn.ejs', {
+                    text: '확인',
+                  })%>
+                  <%-include('./include/button/btn.ejs', {
+                    text: '예약취소',
+                    className: 'type_secondary',
+                  })%>
+                  <%-include('./include/button/btn.ejs', {
+                    text: '에약수정',
+                    className: 'type_thick',
+                  })%>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+
+</body>
+</html>

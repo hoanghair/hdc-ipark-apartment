@@ -1,0 +1,54 @@
+.sec_search{
+  box-sizing: border-box;
+  margin: 0 auto;
+  @include vw-convert-pc(padding, (170, 60, 240));
+  @include vw-convert-pc(max-width, 1464);
+  .title{
+    text-align: center;
+    @include vw-font-style-pc(40, 600, 1.1);
+  }
+  .box_search_input{
+    @include vw-convert-pc(margin, (60, 0, 0, auto));
+  }
+  .search_result{
+    text-align: center;
+    @include vw-convert-pc(margin, (56, 0, 35));
+  }
+  .content_title{
+    display: block;
+    @include vw-convert-pc(margin-bottom, 25);
+    @include vw-font-style-pc(26, 500, 1.4);
+  }
+  .box_content + .box_content{
+    @include vw-convert-pc(margin-top, 100);
+  }
+  .list_product{
+    .item_product {
+      .box_thumb{
+        .list_info{
+          @include vw-convert-pc(padding, (24, 24, 60, 24));
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .sec_search{
+    @include vw-convert-pc(padding, (78, 20, 130));
+    .box_search_input{
+      margin-top: 20px;
+    }
+    .search_result{
+      margin: 60px 0;
+    }
+    .content_title{
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    .box_content + .box_content{
+      margin-top: 100px;
+    }
+  }
+  
+}

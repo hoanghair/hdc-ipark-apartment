@@ -1,0 +1,6 @@
+<% const useRemove = locals.useRemove || false; %>
+<% const text = useRemove ? '관심단지 해제' : '관심단지 추가'; %>
+
+<button type="button" class="btn_interest <%= useRemove ? 'type_remove' : '' %>">
+  <%= text %>
+</button>

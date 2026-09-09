@@ -1,0 +1,244 @@
+<%if (locals.status == 'login') {%>
+<header class="header <%=locals.type%>" id="header" data-lenis-prevent>
+  <div class="header_inner">
+    <div class="logo">
+      <a href="#" class="logo_link">
+        <span class="blind">IPARK</span>
+      </a>
+    </div>
+    <div class="header_menu">
+      <nav class="nav">
+        <ul class="gnb" aria-label="메인 메뉴">
+          <li class="gnb_item" data-type="brands">
+            <a href="#" class="gnb_link is_open">BRANDS</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">브랜드 스토리</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">브랜드 디자인</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb_item" data-type="projects">
+            <a href="#" class="gnb_link">PROJECTS</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">주거 프로젝트</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">IPARK 주거 디자인</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">IPARK 주거 상품</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb_item" data-type="contact">
+            <a href="#" class="gnb_link">CONTACT</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">고객센터 안내</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">공지사항</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">자주 묻는 질문</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">A/S 안내</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb_item" data-type="myipark">
+            <a href="#" class="gnb_link">MY IPARK</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">계약안내</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">분양대금 조회</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">입주 안내</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">나의 관심 단지</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">1:1 문의</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">회원정보 수정</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="nav_info only_pc">
+        <li class="nav_info_item" data-type="brands">
+          <div class="box_img">
+            <img src="../img/common/img_header_brand.jpg" alt="" />
+          </div>
+          <strong class="info_title">BRANDS</strong>
+          <p class="info_desc">What We Value in Life.</p>
+        </li>
+        <li class="nav_info_item" data-type="projects">
+          <div class="box_img">
+            <img src="../img/common/img_header_projects.jpg" alt="" />
+          </div>
+          <strong class="info_title">Projects</strong>
+          <p class="info_desc">Where Your Life Unfolds.</p>
+        </li>
+        <li class="nav_info_item" data-type="contact">
+          <div class="box_img">
+            <img src="../img/common/img_header_contact.jpg" alt="" />
+          </div>
+          <strong class="info_title">Contact</strong>
+          <p class="info_desc">See How We Can Help.</p>
+        </li>
+        <li class="nav_info_item" data-type="myipark">
+          <div class="box_img">
+            <img src="../img/common/img_header_myipark.jpg" alt="" />
+          </div>
+          <strong class="info_title">My IPARK</strong>
+          <p class="info_desc">Manage Your Home Info.</p>
+        </li>
+      </ul>
+      <div class="header_util">
+        <a href="#" class="btn_logout">
+          <span class="only_mo">Logout</span>
+          <span class="blind only_pc">Logout</span>
+        </a>
+        <button type="button" class="btn_search">
+          <span class="blind">Search</span>
+        </button>
+        <button
+          type="button"
+          class="btn_menu only_mo"
+          aria-expanded="false"
+          aria-label="메뉴"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+    <div class="box_search">
+      <div class="box_search_input">
+        <input type="text" placeholder="검색어를 입력해 주세요." class="input" />
+        <button type="button" class="btn_search">
+          <span class="blind">Search</span>
+        </button>
+      </div>
+      <button type="button" class="btn_close">
+        <span class="blind">닫기</span>
+      </button>
+    </div>
+  </div>
+</header>
+<%} else{%>
+<header class="header <%=locals.type%>" id="header" data-lenis-prevent>
+  <div class="header_inner">
+    <div class="logo">
+      <a href="#" class="logo_link">
+        <span class="blind">IPARK</span>
+      </a>
+    </div>
+    <div class="header_menu">
+      <nav class="nav">
+        <ul class="gnb" aria-label="메인 메뉴">
+          <li class="gnb_item" data-type="brands">
+            <a href="#" class="gnb_link is_open">BRANDS</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">브랜드 스토리</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">브랜드 디자인</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb_item" data-type="projects">
+            <a href="#" class="gnb_link">PROJECTS</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">주거 프로젝트</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">IPARK 주거 디자인</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">IPARK 주거 상품</a>
+              </li>
+            </ul>
+          </li>
+          <li class="gnb_item" data-type="contact">
+            <a href="#" class="gnb_link">CONTACT</a>
+            <ul class="gnb_depth">
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">고객센터 안내</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">공지사항</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">자주 묻는 질문</a>
+              </li>
+              <li class="gnb_depth_item">
+                <a href="#" class="gnb_depth_link">A/S 안내</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <ul class="nav_info only_pc">
+        <li class="nav_info_item" data-type="brands">
+          <div class="box_img">
+            <img src="../img/common/img_header_brand.jpg" alt="" />
+          </div>
+          <strong class="info_title">BRANDS</strong>
+          <p class="info_desc">What We Value in Life.</p>
+        </li>
+        <li class="nav_info_item" data-type="projects">
+          <div class="box_img">
+            <img src="../img/common/img_header_projects.jpg" alt="" />
+          </div>
+          <strong class="info_title">Projects</strong>
+          <p class="info_desc">Where Your Life Unfolds.</p>
+        </li>
+        <li class="nav_info_item" data-type="contact">
+          <div class="box_img">
+            <img src="../img/common/img_header_contact.jpg" alt="" />
+          </div>
+          <strong class="info_title">Contact</strong>
+          <p class="info_desc">See How We Can Help.</p>
+        </li>
+      </ul>
+      <div class="header_util">
+        <a href="#" class="btn_login">LOGIN</a>
+        <button type="button" class="btn_search">
+          <span class="blind">Search</span>
+        </button>
+        <button type="button" class="btn_menu only_mo">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="blind">Menu</span>
+        </button>
+      </div>
+    </div>
+    <div class="box_search">
+      <div class="box_search_input">
+        <input type="text" placeholder="검색어를 입력해 주세요." class="input" />
+        <button type="button" class="btn_search">
+          <span class="blind">Search</span>
+        </button>
+      </div>
+      <button type="button" class="btn_close">
+        <span class="blind">닫기</span>
+      </button>
+    </div>
+  </div>
+</header>
+<%}%>

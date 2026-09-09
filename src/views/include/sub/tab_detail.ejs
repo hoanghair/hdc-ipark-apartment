@@ -1,0 +1,20 @@
+<% const listTab = locals.listTab || []; %>
+<% const activeIndex = locals.activeIndex || 0; %>
+<% const selectBtn = locals.selectBtn || ''; %>
+
+<!-- [D] data-active에 활성화 인덱스 추가 -->
+<nav class="box_tab_detail" aria-label="서브 상세 메뉴" data-active="<%= activeIndex %>">
+  <div class="swiper list_tab" role="tablist" >
+    <ul class="swiper-wrapper">
+      <!-- [D] 활설화 시 btn_tab에 is_active 추가 -->
+    <% if (listTab && listTab.length > 0) { %>
+      <% listTab.forEach(item => { %>
+        <li class=" swiper-slide item_tab" role="presentation">
+          <a href="#" class="btn_tab <%= selectBtn === item ? 'is_active' : '' %>" role="tab" aria-selected="<%= selectBtn === item ? 'true' : 'false' %>"><%= item %></a>
+          </li>
+      <% }) %>
+    <% } %>
+    </ul>
+  </div>
+  
+</nav>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 FAQ | 자주 묻는 질문 안내",
+  "listTitle": "자주 묻는 질문 : 고객센터",
+  "metaDesc": "아이파크에 대한 자주 묻는 질문을 주제별로 정리해 안내합니다.",
+  "ogTitle": "아이파크 FAQ | 자주 묻는 질문 안내",
+  "ogDesc": "아이파크에 대한 자주 묻는 질문과 답변을 한곳에서 확인하실 수 있습니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'CONTACT', '자주 묻는 질문'],
+        title: `CONTACT`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['고객센터 안내', '자주묻는 질문', 'A/S 안내', '공지사항'],
+        selectBtn: '자주묻는 질문',
+      })%>
+      <%-include('./include/sub/tab_detail.ejs', {
+        listTab: ['전체', '분양관련', '계약관련', '공사현장', '입주관련', 'A/S관련'],
+        selectBtn: '전체',
+        activeIndex: 0,
+      })%>
+      <div class="contact_content">
+        <section class="sec_contact sec_contact_faq">
+          <h2 class="title">아이파크 관련<br>
+            자주 묻는 질문 목록</h2>
+          <div class="accordion">
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">분양관련</em>
+                <p class="title">[입주자 사전점검 안내] 입주자 사전점검은 언제 하나요?</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">계약관련</em>
+                <p class="title">텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.텍스트 한줄 말줄임 처리 됩니다.</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+            <div class="accordion_item">
+              <button type="button" class="accordion_btn" aria-expanded="false">
+                <em class="category">A/S관련</em>
+                <p class="title">[잔금 납부 관련 안내] 잔금 납부액은 어디서 확인할 수 있나요? (납부 금액, 납부 계좌 안내 등)</p>
+              </button>
+              <div class="accordion_content">
+                <p class="desc">입주자 사전점검은 입주 지정 기간 개시 1~2개월 전에 1회 진행하며, 일정이 확정되면 고객님께 우편물로 안내해드립니다. 입주자 사전점검을 원활하게 진행하기 위해, 고객님께서는 먼저 아이파크 고객 App을 설치하셔야 하며, App 설치 후 방문 예약이 완료되면 알림톡을 통해 확정된 일정을 안내해드립니다. 일정 안내문을 받으신 고객님께서는 지정 기간 내 사전점검 방문 일정을 미리 예약하셔야 현장에서 대기하는 시간을 최소화하실 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+          <%-include('./include/pagination.ejs')%>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

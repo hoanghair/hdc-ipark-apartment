@@ -1,0 +1,8 @@
+<% const href = locals.href || ''; %>
+<% const text = locals.text || ''; %>
+<% const target = locals.target || ''; %>
+<% const className = locals.className || ''; %>
+
+<a href="<%= href %>" class="btn_link link <%= className %>" <% if (target) { %>target="<%= target %>" rel="noopener noreferrer"<% } %>>
+  <%= text %>
+</a>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 FAQ | 자주 묻는 질문 안내",
+  "listTitle": "자주 묻는 질문 (데이터 없음) : 고객센터",
+  "metaDesc": "아이파크에 대한 자주 묻는 질문을 주제별로 정리해 안내합니다.",
+  "ogTitle": "아이파크 FAQ | 자주 묻는 질문 안내",
+  "ogDesc": "아이파크에 대한 자주 묻는 질문과 답변을 한곳에서 확인하실 수 있습니다.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">      
+      <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'CONTACT', '자주 묻는 질문'],
+        title: `CONTACT`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['고객센터 안내', '자주묻는 질문', 'A/S 안내', '공지사항'],
+        selectBtn: '자주묻는 질문',
+      })%>
+      <%-include('./include/sub/tab_detail.ejs', {
+        listTab: ['전체', '분양관련', '계약관련', '공사현장', '입주관련', 'A/S관련'],
+        selectBtn: '전체',
+        activeIndex: 0,
+      })%>
+      <div class="contact_content">
+        <section class="sec_contact sec_contact_faq">
+          <h2 class="title">아이파크 관련<br>
+            자주 묻는 질문 목록</h2>
+          <%-include('./include/no_data.ejs', {
+            title: '등록된 질문이 없습니다.',
+            desc: '더 궁금하신 점이 있으신가요? <a href="#">1:1 문의</a>를 이용해 주세요.',
+          })%>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

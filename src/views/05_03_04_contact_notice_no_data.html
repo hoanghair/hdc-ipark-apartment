@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<%-include('./include/layout/head.ejs',{
+  "title": "아이파크 공지사항 | 공식 안내 및 소식",
+  "listTitle": "공지사항 (데이터 없음) : 고객센터",
+  "metaDesc": "아이파크의 주요 공지사항과 공식 안내 소식을 확인하실 수 있습니다.",
+  "ogTitle": "아이파크 공지사항 | 공식 안내 및 소식",
+  "ogDesc": "아이파크의 공식 공지사항과 주요 안내 소식을 한 곳에서 확인하세요.",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs',{
+      status:'login'
+    })%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', 'CONTACT', '공지사항'],
+        title: `CONTACT`,
+      })%>
+      <%-include('./include/sub/tab.ejs', {
+        listTab: ['고객센터 안내', '자주묻는 질문', 'A/S 안내', '공지사항'],
+        selectBtn: '공지사항',
+      })%>
+      <div class="contact_content">
+        <section class="sec_contact sec_contact_notice">
+          <h2 class="title">아이파크 관련<br>
+            공지사항 목록</h2>
+          <%-include('./include/no_data.ejs', {
+            title: '등록된 공지사항이 없습니다.',
+            desc: '곧 새로운 게시물로 찾아 뵙겠습니다.',
+          })%>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

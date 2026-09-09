@@ -1,0 +1,27 @@
+@import "sass-inline-svg.scss";
+@import "../mixins/mixins.scss";
+
+.svg-sample {
+  display:inline-block;
+  &-01 {
+    @include inline-svg-size(30px, 30px, "twitter", #cecece, none, none);
+    
+    &:hover{
+        @include inline-svg-icon("twitter", orange, none, none);
+    }
+  }
+  &-02 {
+    @include inline-svg-size(30px, 30px, "window", red, none, none);
+    
+    &:hover{
+      @include inline-svg-icon("window", coral, none, none);
+    }
+  }
+  &-03 {
+    @include inline-svg-size(30px, 30px, "youtube", orange, none, none);
+
+  &:hover {
+    @include inline-svg-icon("youtube", blue, none, none);
+  }
+  }
+}

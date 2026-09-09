@@ -1,0 +1,10 @@
+<% const noDataTitle = locals.title || '등록된 내용이 없습니다.'; %>
+<% const noDataDesc = locals.desc || ''; %>
+<% const className = locals.className || ''; %>
+
+<div class="content_none <%= className %>">
+  <strong class="title"><%- noDataTitle %></strong>
+  <% if (noDataDesc) { %>
+  <p class="desc"><%- noDataDesc %></p>
+  <% } %>
+</div>

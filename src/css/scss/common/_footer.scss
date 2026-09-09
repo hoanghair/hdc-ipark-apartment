@@ -1,0 +1,269 @@
+.footer {
+  background: $beige-bg;
+  @include vw-convert-pc(padding, (60, 60, 40, 60));
+  .footer_top {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .box_brand {
+    @include vw-convert-pc(padding-top, 20)
+  }
+
+  .slogan {
+    color: $font-black;
+    font-family: 'Intrinseca', sans-serif;
+    @include vw-convert-pc(margin-top, 30);
+    @include vw-font-style-pc(70, 300, 1.1);
+  }
+
+  .logo {
+    &:before {
+      content: '';
+      display: block;
+      @include useSvg-icons('logo', 98px);
+    }
+  }
+  .footer_info {
+    @include vw-convert-pc(padding-right, 152);
+    @include vw-convert-pc(min-width, 432);
+  }
+  .list_address {
+    display: flex;
+    flex-direction: column;
+    @include vw-convert-pc(gap, 10);
+    .item_address {
+      display: flex;
+      flex-direction: column;
+      @include vw-convert-pc(gap, 8);
+    }
+    .address_title {
+      color: $font-black;
+      @include vw-font-style-pc(14, 600, 1.3);
+    }
+    .address_desc {
+      color: $font-black;
+      @include vw-font-style-pc(14, 400, 1.3);
+    }
+  }
+  .list_sns {
+    display: flex;
+    flex-direction: column;
+    @include vw-convert-pc(margin-top, 26);
+    @include vw-convert-pc(gap, 12);
+    .item_sns {
+      display: flex;
+    }
+    .link_sns {
+      display: inline-block;
+      text-decoration: underline;
+      color: $font-black;
+      @include vw-font-style-pc(14, 600, 1.3);
+    }
+  }
+  .btn_kakao{
+    @include vw-convert-pc(margin-top, 30);
+  }
+
+  .footer_bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @include vw-convert-pc(margin-top, 160);
+  }
+  
+  .box_etc {
+    display: flex;
+    align-items: center;
+    @include vw-convert-pc(margin-top, 28);
+    @include vw-convert-pc(gap, 14);
+  }
+  .list_footer_link {
+    display: flex;
+    @include vw-convert-pc(gap, 14);
+    .footer_link {
+      display: block;
+      color: $dark-gray;
+      @include vw-font-style-pc(14, 400, 1.3);
+      &.type_bold {
+        font-weight: 600;
+      }
+    }
+  }
+  .copyright {
+    letter-spacing: -0.02em;
+    color: $dark-gray;
+    @include vw-font-style-pc(14, 400, 1.3);
+  }
+
+  .box_family_site {
+    position: relative;
+    @include vw-convert-pc(width, 280);
+    @include vw-convert-pc(height, 38);
+    .btn_family_site {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      color: $font-black;
+      border-bottom: 1px solid $font-black;
+      @include vw-font-style-pc(18, 600, 1.3);
+      @include vw-convert-pc(padding, (3, 4, 12, 4));
+
+      &:after {
+        content: '';
+        display: block;
+        @include useSvg-icons('icon_plus', 16px);
+      }
+
+      &.is_open {
+        &:after {
+          @include useSvg-icons('icon_minus', 16px);
+        }
+        & ~ .list_family_site {
+          display: flex;
+        }
+      }
+    }
+    .list_family_site {
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      background: #eae7dc;
+      border-radius: 10px;
+      transform: translateY(-100%);
+      width: 100%;
+      box-sizing: border-box;
+      @include vw-convert-pc(padding, 20);
+      @include vw-convert-pc(gap, 10);
+      @include vw-convert-pc(top, -24);
+    }
+    .link {
+      color: #858585;
+      &:after{
+        display: none;
+      }
+      @include breakpoint(desktop) {
+        &:hover{
+          color: $font-black;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(mobile) {
+  .footer {
+    position: relative;
+    padding: calc(104px + 36 * 100 /  360 * 1vw) 20px 42px;
+    .footer_top {
+      flex-direction: column;
+    }
+
+    .box_brand{
+      padding-top: 0;
+    }
+
+    .slogan {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      width: 100%;
+      text-align: center;
+      margin-top: 0;
+      transform: translateX(-50%);
+      letter-spacing: -0.04em;
+      font-size: calc(36 * 100 /  360 * 1vw);
+    }
+
+    .logo {
+      position: absolute;
+      bottom: 96px;
+      &:before {
+        @include useSvg-icons-mo('logo', 78px);
+      }
+    }
+
+    .list_address {
+      gap: 16px;
+      .item_address {
+        gap: 8px;
+      }
+      .address_title {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.3;
+      }
+      .address_desc {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    }
+    .list_sns {
+      margin-top: 30px;
+      gap: 16px;
+      .link_sns {
+        font-size: 14px;
+      }
+    }
+
+    .btn_kakao {
+      margin-top: 40px;
+    }
+  
+    .footer_info {
+      padding: 0;
+      min-width: 0;
+    }
+    .footer_bottom {
+      flex-direction: column-reverse;
+      margin-top: 40px;
+      .box_text {
+        width: 100%;
+      }
+    }
+    
+    .box_etc {
+      flex-direction: column;
+      gap: 76px;
+      align-items: flex-start;
+    }
+    .list_footer_link {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      width: 100%;
+      .footer_link {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+    .copyright {
+      font-size: 12px;
+    }
+    .box_family_site {
+      width: 100%;
+      height: 38px;
+      .btn_family_site {
+        font-size: 16px;
+        padding: 0 8px 11px;
+        &:after {
+          @include useSvg-icons-mo('icon_plus_mo', 26px);
+        }
+        &.is_open {
+          &:after {
+            @include useSvg-icons-mo('icon_minus_mo', 26px);
+          }
+        }
+      }
+      .list_family_site {
+        padding: 20px;
+        gap: 14px;
+      }
+      .link {
+        font-size: 16px;
+        color: $dark-gray;
+      }
+    }
+  }
+}
