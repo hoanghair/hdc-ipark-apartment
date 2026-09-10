@@ -78,18 +78,6 @@
     @include vw-convert-pc(margin-top, 28);
     @include vw-convert-pc(gap, 14);
   }
-  .list_footer_link {
-    display: flex;
-    @include vw-convert-pc(gap, 14);
-    .footer_link {
-      display: block;
-      color: $dark-gray;
-      @include vw-font-style-pc(14, 400, 1.3);
-      &.type_bold {
-        font-weight: 600;
-      }
-    }
-  }
   .copyright {
     letter-spacing: -0.02em;
     color: $dark-gray;
@@ -226,17 +214,6 @@
       flex-direction: column;
       gap: 76px;
       align-items: flex-start;
-    }
-    .list_footer_link {
-      margin-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      width: 100%;
-      .footer_link {
-        font-size: 14px;
-        font-weight: 400;
-      }
     }
     .copyright {
       font-size: 12px;

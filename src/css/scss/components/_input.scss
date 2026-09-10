@@ -152,61 +152,6 @@
   }
 }
 
-.box_file {
-  position: relative;
-  flex-direction: row;
-  align-items: center;
-  @include vw-convert-pc(gap, 10);
-  &:has(.input.is_value) {
-    .btn_delete {
-      display: block;
-    }
-  }
-  .input {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    color: #8d8d8d;
-    min-width: 0;
-    @include vw-convert-pc(padding-right, 50);
-    &.is_value {
-      color: $font-black;
-      .file_name {
-        min-width: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-      .file_ext {
-        flex-shrink: 0;
-      }
-    }
-  }
-  .btn_delete {
-    display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    @include vw-convert-pc(right, 213);
-    &:before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 100%;
-      @include useSvg-icons('icon_file_clear', 24px);
-    }
-  }
-  .label_file {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    @include vw-convert-pc(gap, 12);
-  }
-}
-
 .box_search_input {
   display: flex;
   align-items: flex-end;
@@ -314,18 +259,6 @@
       }
     }
   }
-  .box_file {
-    .input {
-      padding-right: 40px;
-    }
-    .btn_delete {
-      right: 140px;
-      &:before {
-        @include useSvg-icons-mo('icon_file_clear', 22px);
-      }
-    }
-  }
-
   .textarea {
     padding: 14px 18px;
     font-size: 14px;

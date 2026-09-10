@@ -190,7 +190,7 @@
       }
     }
 
-    $types: brands, projects, contact, myipark;
+    $types: brands, projects;
     @each $type in $types {
       &:has(
           .gnb_item[data-type='#{$type}']:hover,
