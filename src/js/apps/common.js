@@ -3,10 +3,6 @@
 
   const gnbLink = document.querySelectorAll('.gnb_link');
   const btnMenu = document.querySelector('.btn_menu');
-  const btnFamilySite = document.querySelector('.btn_family_site');
-  const btnSearch = document.querySelector('.header .btn_search');
-  const boxSearch = document.querySelector('.header .box_search');
-  const btnSearchClose = document.querySelector('.header .box_search .btn_close');
 
   const header = document.querySelector('header');
   const mainKv = document.querySelector('.sec_main_kv');
@@ -115,7 +111,7 @@
 
   window.addEventListener('resize', () => {
     updateBtnTop();
-    if (!isMobile() && !boxSearch.classList.contains('is_show')) {
+    if (!isMobile()) {
       lenis.start();
       header.classList.remove('is_hidden');
       btnMenu.setAttribute('aria-expanded', false);
@@ -152,38 +148,4 @@
       });
     });
   }
-
-  // Footer Family Site
-  if (btnFamilySite) {
-    btnFamilySite.addEventListener('click', (e) => {
-      const isExpanded = btnFamilySite.getAttribute('aria-expanded') === 'true';
-
-      btnFamilySite.setAttribute('aria-expanded', !isExpanded);
-      btnFamilySite.classList.toggle('is_open');
-    });
-  }
-
-  // 검색
-  btnSearch.addEventListener('click', () => {
-    boxSearch.classList.add('is_show');
-    header.classList.remove('is_open');
-    lenis.stop();
-  });
-
-  btnSearchClose.addEventListener('click', () => {
-    boxSearch.classList.remove('is_show');
-    lenis.start();
-  });
-
-
-  document.addEventListener('click', (e) => {
-    if (
-      boxSearch.classList.contains('is_show') &&
-      !boxSearch.contains(e.target) &&
-      !btnSearch.contains(e.target)
-    ) {
-      boxSearch.classList.remove('is_show');
-      lenis.start();
-    }
-  });
 })();

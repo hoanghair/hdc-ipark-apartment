@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <%-include('./include/layout/head.ejs',{
-  "title": "아이파크 | 삶을 설계하는 라이프스타일 브랜드", 
+  "title": "아이파크 | 삶을 설계하는 라이프스타일 브랜드",
   "listTitle": "메인 : 메인",
   "metaDesc":"아이파크는 주거를 넘어 도시·레저·리테일까지, 삶의 흐름을 설계합니다.",
   "ogTitle":"아이파크 | 삶을 설계하는 라이프스타일 브랜드",
@@ -20,7 +20,7 @@
     <main class="container" id="content">
       <!-- Main KV -->
       <section class="sec_main_kv">
-        
+
         <ul class="list_kv_img">
           <li class="item_kv_img">
             <img src="../img/main/img_kv_00.jpg" alt="" class="only_pc">
@@ -34,83 +34,89 @@
             <img src="../img/main/img_kv_02.jpg" alt="" class="only_pc">
             <img src="../img/main/img_kv_mo_02.jpg" alt="" class="only_mo">
           </li>
-          <li class="item_kv_img">
-            <img src="../img/main/img_kv_03.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_kv_mo_03.jpg" alt="" class="only_mo">
-          </li>
-          <li class="item_kv_img">
-            <img src="../img/main/img_kv_04.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_kv_mo_04.jpg" alt="" class="only_mo">
-          </li>
-          <li class="item_kv_img">
-            <img src="../img/main/img_kv_05.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_kv_mo_05.jpg" alt="" class="only_mo">
-          </li>
-          <li class="item_kv_img">
-            <img src="../img/main/img_kv_06.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_kv_mo_06.jpg" alt="" class="only_mo">
-          </li>
-          <li class="item_kv_img">
-            <img src="../img/main/img_kv_07.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_kv_mo_07.jpg" alt="" class="only_mo">
-          </li>
-          <li class="item_kv_img">
-            <img src="../img/main/img_kv_08.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_kv_mo_08.jpg" alt="" class="only_mo">
-          </li>
         </ul>
         <div class="box_text">
-          <h1 class="title">Vision <br class="only_mo">Becomes <br class="only_mo">Life</h1>
-          <p class="desc">IPARK는 삶의 비전이 일상으로 <br class="only_mo">이어지는 순간을 그립니다.</p>
+          <h1 class="title">청주의 새로운 일상,<br><strong class="title_strong">청주 가경 <br class="only_mo">아이파크 7단지</strong></h1>
+          <p class="desc">
+            오늘의 편안함에 내일의 기대를 더해 <br class="only_mo">더 나은 삶을 만들어갑니다.<br>
+            빛나는 순간을 담고, 새로운 삶의 풍경을 <br class="only_mo">만듭니다.
+          </p>
         </div>
-        <%-include('./include/button/link.ejs', {
-          href: '#',
-          text: '주거 프로젝트 바로가기',
-          className: 'link_project',
-        })%>
       </section>
 
       <!-- 비전 제시 -->
       <section class="sec_main_vision sec_main">
-        <div class="box_text">
-          <h2 class="title animate">Visionary <br class="only_mo">Life Creator</h2>
-          <p class="desc animate" >삶은 하나의 장면에 머무르지 않습니다. <br>하루의 흐름 속에서, <br>모든 순간은 자연스럽게 이어집니다.</p>
-        </div>
         <div class="box_content">
-          <p class="sub_desc animate" >자연·도시·문화를 아우르는 관점으로, <br>삶의 결을 세심하게 다듬어갑니다.</p>
-          <div class="box_img animate"><img src="../img/main/img_vision.jpg" alt=""></div>
-        </div>
-      </section>
-
-      <!-- 삶의 가치 -->
-      <section class="sec_main_magazine sec_main">
-        <div class="sec_inner">
-          <div class="box_bg">
-            <img src="../img/main/img_value_bg.jpg" alt="" class="only_pc">
-            <img src="../img/main/img_value_bg_mo.jpg" alt="" class="only_mo">
+          <div class="box_vision_swiper swiper animate">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="box_img">
+                  <img src="../img/main/img_vision_01.jpg" alt="">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="box_img">
+                  <img src="../img/main/img_vision_02.jpg" alt="">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="box_img">
+                  <img src="../img/main/img_vision_03.jpg" alt="">
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="box_content">
-            <div class="box_text">
-              <h2 class="title animate">Brand Story</h2>
-              <p class="desc animate">주거를 넘어 더 나은 삶의 형식을 <br class="only_mo">설계해온<br class="only_pc">
-                브랜드 IPARK의 <br class="only_mo">철학을 소개합니다.</p>
+          <div class="box_vision_sub swiper animate">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <p class="sub_desc">IPARK에서 새로운 주거의 <br>기준을 만나보세요.</p>
+              </li>
+              <li class="swiper-slide">
+                <p class="sub_desc">IPARK에서 새로운 주거의 <br>기준을 만나보세요.</p>
+              </li>
+              <li class="swiper-slide">
+                <p class="sub_desc">IPARK에서 새로운 주거의 <br>기준을 만나보세요.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="box_aside">
+          <div class="box_text">
+            <div class="box_vision_text swiper animate">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <h2 class="title">Visionary Life <br>Creator</h2>
+                  <strong class="title_sub">머무는 순간마다 느껴지는 편안함, <br>일상 곳곳에 스며드는 여유와 가치.</strong>
+                  <p class="desc">빛나는 순간을 담고, <br>편안한 하루를 채우고, <br>새로운 삶의 풍경을 만듭니다.</p>
+                </li>
+                <li class="swiper-slide">
+                  <h2 class="title">A Space to <br>Belong</h2>
+                  <strong class="title_sub">일상의 머무는 순간이 <br>더 편안하도록.</strong>
+                  <p class="desc">삶의 여유와 취향을 담아낸 공간. <br>편안한 휴식과 일상의 순간이 자연스럽게 <br>이어지는 집을 만듭니다.</p>
+                </li>
+                <li class="swiper-slide">
+                  <h2 class="title">A Life In <br>Nature</h2>
+                  <strong class="title_sub">일상을 가까이, <br>자연을 담다.</strong>
+                  <p class="desc">계절의 변화를 가까이 느끼고 <br>잠시 머무는 순간에도 여유가 머무는 곳. <br>자연과 함께하는 새로운 일상을 완성합니다.</p>
+                </li>
+              </ul>
             </div>
-            <div class="box_bottom animate">
-              <div class="box_img only_pc">
-                <img src="../img/main/img_value.jpg" alt="">
-              </div>
-              <%-include('./include/button/link.ejs', {
-                href: '#',
-                text: '브랜드 스토리 바로가기',
-              })%>
-            </div>
+          </div>
+          <div class="box_swiper_control animate">
+            <button type="button" class="btn_prev">
+              <span class="blind">이전</span>
+            </button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="btn_next">
+              <span class="blind">다음</span>
+            </button>
           </div>
         </div>
       </section>
 
       <!-- 브랜드 경험 -->
       <section class="sec_main_brand sec_main">
-        <h2 class="title animate">Life flows as one <br class="only_mo">through the day</h2>
+        <h2 class="title animate">Life &amp; Value</h2>
         <div class="swiper_navigation only_mo animate">
           <button type="button" class="btn_prev">
             <span class="blind">이전</span>
@@ -127,12 +133,9 @@
                   <img src="../img/main/img_brand_01.jpg" alt="">
                 </div>
               </div>
-              <div class="box_info">
-                <span class="num">(01)</span>
-                <p class="keyword">Living</p>
-              </div>
-              <p class="item_desc">집과 도시가 자연스럽게 이어져<br>
-                편안해지는 일상</p>
+              <strong class="item_title">아이파크에서 시작되는 하루</strong>
+              <p class="item_desc">오늘 위에 더 빛나는 내일을 담다 <br>
+                익숙한 일상은 더 편리하게, 소중한 시간은 더욱 여유롭게.</p>
             </li>
             <li class="item_brand swiper-slide">
               <div class="box_img">
@@ -140,12 +143,9 @@
                   <img src="../img/main/img_brand_02.jpg" alt="">
                 </div>
               </div>
-              <div class="box_info">
-                <span class="num">(02)</span>
-                <p class="keyword">Restore</p>
-              </div>
-              <p class="item_desc">바쁜 시간 속에서<br>
-                나만의 리듬을 되찾는 순간</p>
+              <strong class="item_title">도시의 편리함을 가까이</strong>
+              <p class="item_desc">생활에 필요한 모든 순간을 가까이에서 누리는 <br>
+                편리하고 풍요로운 일상.</p>
             </li>
             <li class="item_brand swiper-slide">
               <div class="box_img">
@@ -153,11 +153,9 @@
                   <img src="../img/main/img_brand_03.jpg" alt="">
                 </div>
               </div>
-              <div class="box_info">
-                <span class="num">(03)</span>
-                <p class="keyword">Energy</p>
-              </div>
-              <p class="item_desc">몸과 마음이<br>다시 살아나는 움직임</p>
+              <strong class="item_title">복합도시 생활 인프라</strong>
+              <p class="item_desc">가족과 함께하는 여가와 휴식의 순간부터 <br>
+                일상 속 다양한 경험과 즐거움을 가까이에서 누리다.</p>
             </li>
             <li class="item_brand swiper-slide">
               <div class="box_img">
@@ -165,77 +163,291 @@
                   <img src="../img/main/img_brand_04.jpg" alt="">
                 </div>
               </div>
-              <div class="box_info">
-                <span class="num">(04)</span>
-                <p class="keyword">Curated</p>
+              <strong class="item_title">초고층 랜드마크</strong>
+              <p class="item_desc">트렌디한 외관 디자인과 구름 위 라이프를 선사할 <br>
+                초고층 랜드마크, 자부심을 더하다.</p>
+            </li>
+            <li class="item_brand swiper-slide">
+              <div class="box_img">
+                <div class="img_inner">
+                  <img src="../img/main/img_brand_05.jpg" alt="">
+                </div>
               </div>
-              <p class="item_desc">필요와 취향이 곁에 있어<br>
-                일상이 채워지는 하루</p>
+              <strong class="item_title">가깝고 풍부한 교육환경</strong>
+              <p class="item_desc">완벽에 가까운 주거환경과 교육환경, <br>
+                이에 더해진 공공시설과 문화 인프라까지, 모든 것이 새롭다.</p>
+            </li>
+            <li class="item_brand swiper-slide">
+              <div class="box_img">
+                <div class="img_inner">
+                  <img src="../img/main/img_brand_06.jpg" alt="">
+                </div>
+              </div>
+              <strong class="item_title">브랜드타운 미래가치</strong>
+              <p class="item_desc">도시의 성장과 새로운 개발로 더욱 높아지는 <br>
+                브랜드타운의 미래가치, 새로운 중심을 열다.</p>
+            </li>
+            <li class="item_brand swiper-slide">
+              <div class="box_img">
+                <div class="img_inner">
+                  <img src="../img/main/img_brand_07.jpg" alt="">
+                </div>
+              </div>
+              <strong class="item_title">고품격 소셜 커뮤니티</strong>
+              <p class="item_desc">아이파크만의 특화 커뮤니티에서 일상의 여유와 <br>
+                고품격 소셜 라이프를 마음껏 호흡하다.</p>
             </li>
           </ul>
         </div>
-        
       </section>
 
-      <!-- 프로젝트 -->
-      <section class="sec_main_project sec_main">
-        <div class="box_title ">
-          <h2 class="title animate">Stories Behind <br class="only_mo">Our Projects</h2>
-          <%-include('./include/button/link.ejs', {
-            href: '#',
-            text: '주거 프로젝트 바로가기',
-            className: 'link animate',
-          })%>
+      <!-- 삶의 가치 -->
+      <section class="sec_main_magazine sec_main">
+        <div class="sec_inner">
+          <div class="box_content">
+            <div class="box_text">
+              <h2 class="title animate">A Different Way <br>To Live</h2>
+              <p class="title_sub animate">도시의 편리함과 <br>자연의 여유가 만나는 곳.</p>
+              <p class="desc animate">IPARK가 제안하는 <br> 더 나은 일상의 기준을 만나보세요.</p>
+            </div>
+            <div class="box_bottom animate">
+              <%-include('./include/button/btn_link_border.ejs', {
+                href: '#',
+                text: '아파트 모집공고',
+              })%>
+              <%-include('./include/button/btn_link_border.ejs', {
+                href: '#',
+                text: '오피스텔 모집공고',
+              })%>
+            </div>
+          </div>
+          <div class="box_bg">
+            <img src="../img/main/img_value_bg.jpg" alt="" class="only_pc">
+            <img src="../img/main/img_value_bg_mo.jpg" alt="" class="only_mo animate">
+          </div>
+        </div>
+      </section>
+
+      <!-- 유닛 타입 -->
+      <section class="sec_main_unit sec_main">
+        <div class="box_bg only_pc">
+          <img src="../img/main/img_unit_bg_01.png" alt="" class="img_unit_bg">
         </div>
         <div class="box_content">
-          <p class="desc animate">자연에 가까울수록<br>
-            일상은 더 고요해집니다.</p>
-          <ul class="list_project">
-            <li class="item_project animate">
-              <div class="box_img">
-                <img src="../img/main/img_project_01.jpg" alt="">
+          <div class="box_title">
+            <h2 class="title animate">Unit Type</h2>
+            <div class="box_text animate">
+              <p class="desc">거주자의 라이프스타일에 맞춘 다양한 평면 구성으로 최적의 주거 공간을 제안합니다.</p>
+              <%-include('./include/button/link.ejs', {
+                href: '#',
+                text: '자세히보기',
+                className: 'link type_small animate',
+              })%>
+            </div>
+          </div>
+          <div class="box_unit animate">
+            <ul class="list_unit">
+              <li class="item_unit is_active" data-img="../img/main/img_unit_bg_01.png">
+                <button type="button" class="btn_unit" aria-expanded="true">
+                  <strong class="unit_name">74A Type</strong>
+                  <span class="unit_meta">
+                    <span class="unit_count">총 80세대</span>
+                  </span>
+                </button>
+                <div class="box_unit_detail">
+                  <div class="box_unit_detail_inner">
+                    <div class="box_unit_img only_mo">
+                      <img src="../img/main/img_unit_bg_01.png" alt="">
+                    </div>
+                    <ul class="list_unit_detail">
+                      <li>주거전용면적 74.6029 ㎡</li>
+                      <li>주거공용면적 37.5994 ㎡</li>
+                      <li>공급면적 112.2023 ㎡</li>
+                      <li>기타공용면적 46.2845 ㎡</li>
+                      <li>계약면적 158.4868 ㎡</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item_unit" data-img="../img/main/img_unit_bg_02.png">
+                <button type="button" class="btn_unit" aria-expanded="false">
+                  <strong class="unit_name">84A Type</strong>
+                  <span class="unit_meta">
+                    <span class="unit_count">총 160세대</span>
+                  </span>
+                </button>
+                <div class="box_unit_detail">
+                  <div class="box_unit_detail_inner">
+                    <div class="box_unit_img only_mo">
+                      <img src="../img/main/img_unit_bg_02.png" alt="">
+                    </div>
+                    <ul class="list_unit_detail">
+                      <li>주거전용면적 84.1234 ㎡</li>
+                      <li>주거공용면적 40.1234 ㎡</li>
+                      <li>공급면적 124.2468 ㎡</li>
+                      <li>기타공용면적 48.1234 ㎡</li>
+                      <li>계약면적 172.3702 ㎡</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item_unit" data-img="../img/main/img_unit_bg_03.png">
+                <button type="button" class="btn_unit" aria-expanded="false">
+                  <strong class="unit_name">84B Type</strong>
+                  <span class="unit_meta">
+                    <span class="unit_count">총 160세대</span>
+                  </span>
+                </button>
+                <div class="box_unit_detail">
+                  <div class="box_unit_detail_inner">
+                    <div class="box_unit_img only_mo">
+                      <img src="../img/main/img_unit_bg_03.png" alt="">
+                    </div>
+                    <ul class="list_unit_detail">
+                      <li>주거전용면적 84.5678 ㎡</li>
+                      <li>주거공용면적 41.2345 ㎡</li>
+                      <li>공급면적 125.8023 ㎡</li>
+                      <li>기타공용면적 49.0123 ㎡</li>
+                      <li>계약면적 174.8146 ㎡</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item_unit" data-img="../img/main/img_unit_bg_04.png">
+                <button type="button" class="btn_unit" aria-expanded="false">
+                  <strong class="unit_name">89OA Type</strong>
+                  <span class="unit_meta">
+                    <span class="unit_count">총 78세대</span>
+                  </span>
+                </button>
+                <div class="box_unit_detail">
+                  <div class="box_unit_detail_inner">
+                    <div class="box_unit_img only_mo">
+                      <img src="../img/main/img_unit_bg_04.png" alt="">
+                    </div>
+                    <ul class="list_unit_detail">
+                      <li>주거전용면적 89.0123 ㎡</li>
+                      <li>주거공용면적 42.3456 ㎡</li>
+                      <li>공급면적 131.3579 ㎡</li>
+                      <li>기타공용면적 50.2345 ㎡</li>
+                      <li>계약면적 181.5924 ㎡</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item_unit" data-img="../img/main/img_unit_bg_05.png">
+                <button type="button" class="btn_unit" aria-expanded="false">
+                  <strong class="unit_name">89OB Type</strong>
+                  <span class="unit_meta">
+                    <span class="unit_count">총 39세대</span>
+                  </span>
+                </button>
+                <div class="box_unit_detail">
+                  <div class="box_unit_detail_inner">
+                    <div class="box_unit_img only_mo">
+                      <img src="../img/main/img_unit_bg_05.png" alt="">
+                    </div>
+                    <ul class="list_unit_detail">
+                      <li>주거전용면적 89.2345 ㎡</li>
+                      <li>주거공용면적 42.5678 ㎡</li>
+                      <li>공급면적 131.8023 ㎡</li>
+                      <li>기타공용면적 50.4567 ㎡</li>
+                      <li>계약면적 182.2590 ㎡</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="item_unit" data-img="../img/main/img_unit_bg_06.png">
+                <button type="button" class="btn_unit" aria-expanded="false">
+                  <strong class="unit_name">89OC Type</strong>
+                  <span class="unit_meta">
+                    <span class="unit_count">총 39세대</span>
+                  </span>
+                </button>
+                <div class="box_unit_detail">
+                  <div class="box_unit_detail_inner">
+                    <div class="box_unit_img only_mo">
+                      <img src="../img/main/img_unit_bg_06.png" alt="">
+                    </div>
+                    <ul class="list_unit_detail">
+                      <li>주거전용면적 89.4567 ㎡</li>
+                      <li>주거공용면적 42.7890 ㎡</li>
+                      <li>공급면적 132.2457 ㎡</li>
+                      <li>기타공용면적 50.6789 ㎡</li>
+                      <li>계약면적 182.9246 ㎡</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 연락하기 -->
+      <section class="sec_main_contact sec_main">
+        <div class="box_content">
+          <div class="box_text animate">
+            <h2 class="title">Contact</h2>
+            <p class="desc">청주 가경 아이파크 7단지의 현장과 견본주택으로 오시는 길을 안내합니다.</p>
+          </div>
+          <ul class="list_contact animate">
+            <li class="item_contact">
+              <div class="box_contact_info">
+                <span class="icon_contact type_location" aria-hidden="true"></span>
+                <div class="box_contact_text">
+                  <strong class="contact_label">현장</strong>
+                  <p class="contact_desc">충청북도 청주시 흥덕구 가경동 309</p>
+                </div>
               </div>
-              <p class="item_desc">도심 속 자연을 당연하게
-                <em class="name">운정 아이파크 포레스트</em></p>
+              <div class="box_contact_btns">
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '네이버 지도 보기',
+                  target: '_blank',
+                })%>
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '카카오 지도 보기',
+                  target: '_blank',
+                })%>
+              </div>
             </li>
-            <li class="item_project animate">
-              <div class="box_img">
-                <img src="../img/main/img_project_02.jpg" alt="">
+            <li class="item_contact">
+              <div class="box_contact_info">
+                <span class="icon_contact type_home" aria-hidden="true"></span>
+                <div class="box_contact_text">
+                  <strong class="contact_label">견본 주택</strong>
+                  <p class="contact_desc">충청북도 청주시 흥덕구 가경동 일원</p>
+                </div>
               </div>
-              <p class="item_desc">호수와 함께하는 삶
-                <em class="name">천안 아이파크 시티</em></p>
+              <div class="box_contact_btns">
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '네이버 지도 보기',
+                  target: '_blank',
+                })%>
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '카카오 지도 보기',
+                  target: '_blank',
+                })%>
+              </div>
             </li>
-            <li class="item_project animate">
-              <div class="box_img">
-                <img src="../img/main/img_project_03.jpg" alt="">
+            <li class="item_contact">
+              <div class="box_contact_info">
+                <span class="icon_contact type_call" aria-hidden="true"></span>
+                <div class="box_contact_text">
+                  <strong class="contact_label">대표번호</strong>
+                  <a href="tel:1566-0431" class="contact_desc type_phone">1566-0431</a>
+                </div>
               </div>
-              <p class="item_desc">배움이 가까이에 있는
-                <em class="name">익산 부송 아이파크</em></p>
-            </li>
-            <li class="item_project animate">
-              <div class="box_img">
-                <img src="../img/main/img_project_04.jpg" alt="">
-              </div>
-              <p class="item_desc">생활에 중심이 되는
-                <em class="name">의정부역 센트럴 아이파크</em></p>
-            </li>
-            <li class="item_project animate">
-              <div class="box_img">
-                <img src="../img/main/img_project_05.jpg" alt="">
-              </div>
-              <p class="item_desc">일상의 편리함이 자연스러운
-                <em class="name">서울원 아이파크</em></p>
-            </li>
-            <li class="item_project animate">
-              <div class="box_img">
-                <img src="../img/main/img_project_06.jpg" alt="">
-              </div>
-              <p class="item_desc">도시의 미래가 모이는
-                <em class="name">성남 아이파크 디어반</em></p>
             </li>
           </ul>
-          <p class="desc animate" >머무는 곳이 달라지면<br>
-            삶의 방식도 달라집니다.</p>
+        </div>
+        <div class="box_bg">
+          <img src="../img/main/img_map.jpg" alt="청주 가경 아이파크 7단지 오시는 길" class="only_pc">
+          <img src="../img/main/img_map_mo.jpg" alt="청주 가경 아이파크 7단지 오시는 길" class="only_mo animate">
         </div>
       </section>
 

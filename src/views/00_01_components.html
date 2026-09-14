@@ -189,6 +189,31 @@
           </div>
         </div>
 
+        <div class="box_component">
+          <div class="component_header">
+            <h3 class="component_title">Link Border Button</h3>
+            <span class="component_file_path">button/btn_link_border.ejs</span>
+          </div>
+          <div class="component_example" style="max-width: 360px;">
+            <%-include('./include/button/btn_link_border.ejs', {
+              href: '#',
+              text: '아파트 모집공고',
+            })%>
+          </div>
+          <div class="code_wrapper">
+            <div class="code_label">CODE</div>
+            <button onclick="copyCode('code-btn-link-border', this)" class="btn_copy">복사</button>
+            <div class="component_code">
+              <pre id="code-btn-link-border"><code>&lt;%-include('./include/button/btn_link_border.ejs', {
+  href: '#',
+  text: '아파트 모집공고',
+  className: '', // 선택사항
+  target: '_blank' // 선택사항
+})%&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+
         <!-- Smaple -->
         <div class="box_component">
           <div class="component_header">

@@ -6,126 +6,39 @@
       </strong>
       <p class="slogan">Vision Becomes Life</p>
     </div>
-    <div class="footer_info">
-      <dl class="list_address">
-        <div class="item_address">
-          <dt class="address_title">IPARK현대산업개발</dt>
-          <dd class="address_desc">04377 서울시 용산구 한강대로 23길 55</dd>
-        </div>
-        <div class="item_address">
-          <dt class="address_title">IPARK아이앤콘스</dt>
-          <dd class="address_desc">13556 경기도 성남시 분당구 정자일로 213번길 5</dd>
-        </div>
-      </dl>
-      <ul class="list_sns">
-        <li class="item_sns">
-          <a href="https://blog.naver.com/iparkstory" class="link_sns" target="_blank" rel="noopener noreferrer">Blog</a>
-        </li>
-        <li class="item_sns">
-          <a href="https://www.youtube.com/channel/UCySfDlTUn7zF1DfdnAaSHOQ" class="link_sns" target="_blank" rel="noopener noreferrer">Youtube</a>
-        </li>
-        <li class="item_sns">
-          <a href="https://www.facebook.com/hdcdvp" class="link_sns" target="_blank" rel="noopener noreferrer">Facebook</a>
-        </li>
-        <li class="item_sns">
-          <a href="https://www.instagram.com/hdcdvp/" class="link_sns" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </li>
-      </ul>
-      <%-include('../button/btn_kakao.ejs')%>
-    </div>
   </div>
   <div class="footer_bottom">
     <div class="box_text">
-      
+      <div class="footer_info">
+        <dl class="list_notice">
+          <div class="item_notice">
+            <dt class="notice_title">HDC현대산업개발</dt>
+            <dt class="notice_title">04377 서울특별시 용산구 한강대로 23길 55</dt>
+          </div>
+          <ul class="list_notice_desc">
+            <li class="item_notice_desc">
+              <p class="notice_desc">※ 본 홈페이지에 사용된 CG, 사진, 이미지, 지역도는 소비자의 이해를 돕기 위한 것으로 실제와 차이가 있을 수 있습니다.</p>
+            </li>
+            <li class="item_notice_desc">
+              <p class="notice_desc">※ 본 홈페이지에 기재된 예정인 개발계획은 관계기관의 사정에 따라 지연, 변경, 취소될 수 있으며 이는 시행사 및 시공사와는 무관함을 알려드립니다.</p>
+            </li>
+            <li class="item_notice_desc">
+              <p class="notice_desc">※ 본 홈페이지는 제작 과정상 오탈자가 발생할 수 있으며, 자세한 내용은 반드시 대표번호 문의 및 계약 전 당사를 통해 확인하시기 바랍니다.</p>
+            </li>
+          </ul>
+        </dl>
+      </div>
       <div class="box_etc">
+        <ul class="list_footer_link">
+          <li class="item_footer_link">
+              <a href="#" class="footer_link">Terms of Service</a>
+          </li>
+          <li class="item_footer_link">
+              <a href="#" class="footer_link">Privacy Policy</a>
+          </li>
+        </ul>
         <p class="copyright">© IPARK HYUNDAI DEVELOPMENT COMPANY. <br class="only_mo">ALL RIGHTS RESERVED.</p>
       </div>
-    </div>
-    <div class="box_family_site">
-      <button type="button" class="btn_family_site"  aria-expanded="false" aria-controls="family-site-list">Family Site</button>
-      <ul class="list_family_site"  id="family-site-list">
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://hdc-holdings.com/',
-            text: 'HDC',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://www.hdc-dvp.com/',
-            text: 'IPARK현대산업개발',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://www.hdc-incons.com/',
-            text: 'IPARK아이앤콘스',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://www.hdc-iparkmall.com/main/webrender.do/',
-            text: 'IPARK몰',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://store.shillaipark.com/comm/kr/ko/dfhMain.dfs?lang=kr',
-            text: 'IPARK신라면세점',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://www.hdc-hotel.com/',
-            text: '호텔IPARK',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://www.hdc-resort.com/',
-            text: 'IPARK리조트',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'https://www.busanipark.com/main.php',
-            text: 'IPARK스포츠',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-        <li class="item_family_site">
-          <%-include('../button/link.ejs', {
-            href: 'http://www.ycpiano.co.kr/',
-            text: 'IPARK영창',
-            className: 'type_small',
-            target: '_blank',
-            rel: 'noopener noreferrer',
-          })%>
-        </li>
-      </ul>
     </div>
   </div>
 </footer>
