@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <%-include('./include/layout/head.ejs',{
-  "title": "IPARK Components", 
+  "title": "IPARK Components",
   "listTitle": "Components : Common",
   "metaDesc":"IPARK Components",
   "ogTitle":"IPARK Components",
@@ -146,7 +146,7 @@
       <!-- Button -->
       <section class="sec_components">
         <h2 class="category_title">Button</h2>
-        
+
         <div class="box_component">
           <div class="component_header">
             <h3 class="component_title">Link</h3>
@@ -237,7 +237,7 @@
             <!-- Sub 공통 -->
       <section class="sec_components">
         <h2 class="category_title">Sub Common</h2>
-        
+
         <div class="box_component">
           <div class="component_header">
             <h3 class="component_title">Sub KV</h3>
@@ -247,7 +247,7 @@
             <%-include('./include/sub/sec_sub_kv.ejs', {
               breadcrumb: ['HOME', '분양정보', '사업개요'],
               title: 'BRIEF',
-              imgs: ['../img/sub/img_kv_01.jpg', '../img/sub/img_kv_02.jpg'],
+              imgs: ['../img/sub/01/img_kv_01_01.jpg', '../img/sub/01/img_kv_01_02.jpg'],
               subTitle: '일상에 새로운 가치를 더합니다.',
               desc: `청주의 중심, 가경동에서 새로운 주거의 기준을 제시합니다.<br>
               교통, 교육, 생활 인프라를 두루 갖춘 아이파크만의 품격 있는 라이프스타일을 경험하세요.<br>
@@ -261,7 +261,7 @@
               <pre id="code-link"><code>&lt;%-include('./include/sub/sec_sub_kv.ejs', {
   breadcrumb: ['HOME', '분양정보', '사업개요'],
   title: 'BRIEF',
-  imgs: ['../img/sub/img_kv_01.jpg', '../img/sub/img_kv_02.jpg'],
+  imgs: ['../img/sub/01/img_kv_01_01.jpg', '../img/sub/01/img_kv_01_02.jpg'],
   subTitle: '일상에 새로운 가치를 더합니다.',
   desc: `청주의 중심, 가경동에서 새로운 주거의 기준을 제시합니다.<br>
   교통, 교육, 생활 인프라를 두루 갖춘 아이파크만의 품격 있는 라이프스타일을 경험하세요.<br>
@@ -300,13 +300,13 @@ function copyCode(id, btnElement) {
   const code = codeElement.textContent || codeElement.innerText;
   const btn = btnElement;
   const originalText = btn.textContent;
-  
+
   // Clipboard API 사용 (최신 브라우저)
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(code).then(function() {
       btn.textContent = '복사됨!';
       btn.classList.add('btn_copy_success');
-      
+
       setTimeout(function() {
         btn.textContent = originalText;
         btn.classList.remove('btn_copy_success');
@@ -330,7 +330,7 @@ function fallbackCopy(code, btn, originalText) {
   document.body.appendChild(textArea);
   textArea.focus();
   textArea.select();
-  
+
   try {
     const successful = document.execCommand('copy');
     if (successful) {
@@ -346,7 +346,7 @@ function fallbackCopy(code, btn, originalText) {
   } catch (err) {
     console.error('복사 중 오류 발생:', err);
   }
-  
+
   document.body.removeChild(textArea);
 }
 </script>

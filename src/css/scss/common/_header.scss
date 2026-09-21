@@ -289,7 +289,7 @@
         background: $white;
       }
       .btn_menu:before {
-        @include useSvg-icons-mo('icon_close', 36px);
+        @include useSvg-icons-mo('icon_close', 24px);
       }
       .btn_call {
         display: none;

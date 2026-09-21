@@ -35,7 +35,6 @@
     ],
     "dist": "dist/img/",
     "svg": "src/img/inline-svg/*.svg",
-    "lottie": "src/img/**/*.lottie",
     "minOpts": {
       "optimizationLevel": 5
     }

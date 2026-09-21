@@ -9,7 +9,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@lottiefiles/dotlottie-web": "^0.65.0",
     "babel-polyfill": "^6.26.0"
   },
   "devDependencies": {

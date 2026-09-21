@@ -34,7 +34,7 @@ const generateImages = () =>{
     module:{
       rules:[
         {
-          test: /\.(png|jpg|jpeg|gif|svg|webp|lottie)$/i,
+          test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
           type: 'asset/resource', // webpack5 의 file-loader 표준 방식
         }
       ]
@@ -203,20 +203,11 @@ const generateSVG = () =>src(config.imgSetting.svg)
     destDir: "src/css/scss/inline-svg"
   })
 );
-const generateLottie = () => {
-  return src(config.imgSetting.lottie)
-    .pipe(cache('generateLottie'))
-    .pipe(tap(file => {
-      console.log(`📦 generateLottie 처리 중: ${file.relative}`);
-    }))
-    .pipe(dest(config.imgSetting.dist));
-}
 
 module.exports={
   generateImages,
   generateSprite,
   generateSVG,
-  generateLottie,
   spriteSvg,
   spriteSvgMove,
   delSvg

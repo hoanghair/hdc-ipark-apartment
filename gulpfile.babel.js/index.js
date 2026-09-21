@@ -4,7 +4,7 @@ const { cloneRoot, cloneFontFolder } = require('./clone');
 const { swipeDist } = require('./swipe');
 const { setting } = require('./project');
 const { minifyJS, concatLibsJS } = require('./js');
-const { spriteSvg, generateSprite, generateImages, generateSVG, generateLottie, spriteSvgMove,delSvg } = require('./images');
+const { spriteSvg, generateSprite, generateImages, generateSVG, spriteSvgMove,delSvg } = require('./images');
 const { concatLibsCSS, compileSCSS } = require('./css');
 const { setHTML, generateHTML } = require('./html');
 const { watchingResources, launchServer } = require('./server');
@@ -13,7 +13,7 @@ const { sourceDeploy } = require('./deploy');
 const build = series(
   swipeDist,
   cloneRoot,
-  parallel(generateImages, generateLottie, cloneFontFolder, concatLibsJS,minifyJS,concatLibsCSS),
+  parallel(generateImages, cloneFontFolder, concatLibsJS,minifyJS,concatLibsCSS),
   parallel(generateSVG, spriteSvg, generateSprite, setHTML),
   spriteSvgMove,
   delSvg,
