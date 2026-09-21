@@ -94,7 +94,7 @@
   color: $font-black;
   background: $white;
   border: 1px solid $font-black;
-  @include vw-convert-pc(gap, 18);
+  @include vw-convert-pc(gap, 7);
   @include vw-convert-pc(padding, (10, 14));
   @include vw-font-style-pc(16, 500, 1.5);
 
@@ -255,7 +255,7 @@
   }
 
   .btn_link_border {
-    padding: 14px 16px;
+    padding: 8.5px 12px;
     font-size: 14px;
     line-height: 1.5;
 

@@ -7,7 +7,7 @@
 
   const btnSubTab = document.querySelectorAll('.box_sub_tab .js_sub_tab');
   const btnProjectSelect = document.querySelectorAll('.btn_project_select');
-    
+
   const brandTabs = document.querySelectorAll('.box_brand_tab .btn_brand_tab');
   const brandPanels = document.querySelectorAll('.box_content .box_panel');
 
@@ -190,11 +190,11 @@
         const isActive = tab === targetTab;
         const panelId = tab.getAttribute('aria-controls');
         const panel = panelId ? document.getElementById(panelId) : null;
-        
+
         tab.classList.toggle('is_active', isActive);
         tab.setAttribute('aria-selected', isActive);
-        
-        
+
+
         if (panel) {
           if (isActive) {
             panel.classList.add('is_show');
@@ -205,7 +205,7 @@
       });
     };
 
-    
+
     btnSubTab.forEach((btn) => {
       btn.addEventListener('click', function () {
         activateTab(btn);
@@ -258,14 +258,14 @@
         }
       });
     };
-    
+
     // 탭 클릭 이벤트
     brandTabs.forEach((tab, index) => {
       tab.addEventListener('click', function() {
         activateTab(tab, index);
       });
     });
-    
+
   }
 
 
@@ -329,7 +329,7 @@
       });
     });
   }
-  
+
 
   function clampWithIcon(el) {
     const title = el.querySelector('.news_title');
@@ -410,15 +410,66 @@
       const secBrandCoreTop = secBrandCore.offsetTop;
       if (scrollTop > secBrandCoreTop) {
         secBrandCore.classList.add('is_show');
-      } 
+      }
     }
     if (secBrandEssense) {
       const secBrandEssenseTop = secBrandEssense.offsetTop;
       if (scrollTop > secBrandEssenseTop - 80) {
         secBrandEssense.classList.add('is_show');
-      } 
+      }
     }
   });
 
+  const overviewValueEl = document.querySelector('.sec_overview_value .box_value_swiper');
+  if (overviewValueEl) {
+    const overviewMq = window.matchMedia('(min-width: 1025px)');
+
+    const overviewValueSwiper = new Swiper(overviewValueEl, {
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true,
+      },
+      loop: true,
+      speed: 600,
+      autoHeight: !overviewMq.matches,
+      observer: true,
+      observeParents: true,
+      pagination: {
+        el: '.sec_overview_value .swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    const syncOverviewValueSwiper = () => {
+      const isPc = overviewMq.matches;
+      overviewValueSwiper.params.autoHeight = !isPc;
+      overviewValueSwiper.originalParams.autoHeight = !isPc;
+
+      if (isPc) {
+        overviewValueEl.style.height = '';
+        if (overviewValueSwiper.wrapperEl) {
+          overviewValueSwiper.wrapperEl.style.height = '';
+        }
+      }
+
+      overviewValueSwiper.update();
+      if (!isPc) {
+        overviewValueSwiper.updateAutoHeight(0);
+      }
+    };
+
+    if (typeof overviewMq.addEventListener === 'function') {
+      overviewMq.addEventListener('change', syncOverviewValueSwiper);
+    } else {
+      overviewMq.addListener(syncOverviewValueSwiper);
+    }
+
+    window.addEventListener('resize', () => {
+      requestAnimationFrame(syncOverviewValueSwiper);
+    });
+
+    requestAnimationFrame(syncOverviewValueSwiper);
+    window.addEventListener('load', syncOverviewValueSwiper, { once: true });
+  }
 
 })();

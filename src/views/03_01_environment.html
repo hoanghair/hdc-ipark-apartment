@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "입지환경 | IPARK 분양사이트 템플릿",
+  "listTitle": "입지환경 : 상품특징",
+  "metaDesc":"IPARK 분양사이트 템플릿",
+  "ogTitle":"IPARK | IPARK 분양사이트 템플릿",
+  "ogDesc":"IPARK 분양사이트 템플릿",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs')%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="environment">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', '상품특징', '입지환경'],
+        title: 'LIFE&amp;VALUE',
+        subTitle: '가까운 편리함이 더 큰 일상을 만듭니다.',
+        desc: `청주의 주요 생활권을 잇는 편리한 교통망과 함께<br class="only_pc">
+        교육, 쇼핑, 문화 등 다양한 생활 인프라를 가까이 누릴 수 있습니다.<br class="only_pc">
+        풍부한 주변 환경을 바탕으로 일상의 가치를 한층 높여갑니다.`,
+        imgs: ['../img/sub/01/img_kv_01_01.jpg', '../img/sub/01/img_kv_01_02.jpg'],
+      })%>
+
+      <div class="environment_content">
+        <section class="sec_environment">
+          <ul class="list_environment">
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_01.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">청주의 중심에서 시작되는 하루</h2>
+                <p class="item_desc">오늘 위에 더 빛나는 내일을 담다<br>
+                  익숙한 일상은 더 편리하게, 소중한 시간은 더욱 여유롭게.</p>
+              </div>
+            </li>
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_02.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">도시의 편리함을 가까이</h2>
+                <p class="item_desc">생활에 필요한 모든 순간을 가까이에서 누리는<br>
+                  편리하고 풍요로운 일상.</p>
+              </div>
+            </li>
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_03.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">복합도시 생활 인프라</h2>
+                <p class="item_desc">가족과 함께하는 여가와 휴식의 순간부터<br>
+                  일상 속 다양한 경험과 즐거움을 가까이에서 누리다.</p>
+              </div>
+            </li>
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_04.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">초고층 랜드마크</h2>
+                <p class="item_desc">트렌디한 외관 디자인과 구름 위 라이프를 선사할<br>
+                  초고층 랜드마크, 자부심을 더하다.</p>
+              </div>
+            </li>
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_05.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">가깝고 풍부한 교육환경</h2>
+                <p class="item_desc">완벽에 가까운 주거환경과 교육환경,<br>
+                  이에 더해진 공공시설과 문화 인프라까지, 모든 것이 새롭다.</p>
+              </div>
+            </li>
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_06.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">브랜드타운 미래가치</h2>
+                <p class="item_desc">도시의 성장과 새로운 개발로 더욱 높아지는<br>
+                  브랜드타운의 미래가치, 새로운 중심을 열다.</p>
+              </div>
+            </li>
+            <li class="item_environment animate">
+              <div class="box_img">
+                <img src="../img/sub/02/img_environment_07.jpg" alt="">
+              </div>
+              <div class="box_text">
+                <h2 class="item_title">고품격 소셜 커뮤니티</h2>
+                <p class="item_desc">아이파크만의 특화 커뮤니티에서 일상의 여유와<br>
+                  고품격 소셜 라이프를 마음껏 호흡하다.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

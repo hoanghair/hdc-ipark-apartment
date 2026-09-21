@@ -10,6 +10,11 @@ const swiperPopup = new Swiper('.box_popup_swiper', {
   slidesPerView: 1,
   spaceBetween: 10,
   autoHeight: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: '.popup .swiper-pagination',
     type: 'fraction',

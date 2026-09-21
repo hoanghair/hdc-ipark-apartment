@@ -3,20 +3,39 @@
 <% const desc = locals.desc || ''; %>
 <% const breadcrumb = locals.breadcrumb || []; %>
 <% const hasBreadcrumb = breadcrumb && breadcrumb.length > 0; %>
+<% const imgs = locals.imgs || []; %>
 
 <section class="sec_sub_kv">
-  <h1 class="title"><%- title %></h2>
-  <% if (subTitle && desc) { %>
-    <div class="box_text">
-      <strong class="sub_title"><%- subTitle %></strong>
-      <p class="desc"><%- desc %></p>
+  <div class="box_kv_inner">
+    <div class="box_text_box">
+      <h1 class="title"><%- title %></h1>
+      <% if (subTitle && desc) { %>
+        <div class="box_text">
+          <strong class="sub_title"><%- subTitle %></strong>
+          <p class="desc"><%- desc %></p>
+        </div>
+      <% } %>
     </div>
-  <% } %>
+    <div class="box_img">
+      <div class="item_img animate">
+        <div class="img_inner">
+          <img src="<%- imgs[0] %>" alt="">
+        </div>
+      </div>
+      <div class="item_img animate">
+        <div class="img_inner">
+          <img src="<%- imgs[1] %>" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
   <% if (hasBreadcrumb) { %>
   <nav class="breadcrumb" aria-label="breadcrumb">
     <ol class="list_breadcrumb">
       <% breadcrumb.forEach((item, index) => { %>
-        <% if (index === breadcrumb.length - 1) { %>
+        <% if (index === 0) { %>
+          <li class="item_breadcrumb type_home"><span class="blind"><%= item %></span></li>
+        <% } else if (index === breadcrumb.length - 1) { %>
           <li class="item_breadcrumb" aria-current="page"><%= item %></li>
         <% } else { %>
           <li class="item_breadcrumb"><%= item %></li>

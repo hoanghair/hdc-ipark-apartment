@@ -9,19 +9,19 @@ $icons-svg-origin: (
 
 $icons-svg-vars: (
   'icon_arrow': (
-    offset-x: 0px,
-    offset-y: -295px,
+    offset-x: -302px,
+    offset-y: -242px,
     width: 24px,
     height: 24px
   ),
   'icon_arrow_disabled': (
-    offset-x: -32px,
-    offset-y: -295px,
+    offset-x: -268px,
+    offset-y: -237px,
     width: 24px,
     height: 24px
   ),
   'icon_arrow_down': (
-    offset-x: -64px,
+    offset-x: 0px,
     offset-y: -295px,
     width: 24px,
     height: 24px
@@ -46,63 +46,63 @@ $icons-svg-vars: (
   ),
   'icon_call': (
     offset-x: -340px,
-    offset-y: -222px,
+    offset-y: -190px,
     width: 20px,
     height: 20px
   ),
   'icon_call_black': (
     offset-x: -340px,
-    offset-y: -250px,
+    offset-y: -218px,
     width: 20px,
     height: 20px
   ),
   'icon_call_white': (
-    offset-x: -96px,
+    offset-x: -32px,
     offset-y: -295px,
     width: 24px,
     height: 24px
   ),
   'icon_checkbox': (
-    offset-x: -220px,
-    offset-y: -327px,
+    offset-x: -340px,
+    offset-y: -302px,
     width: 16px,
     height: 16px
   ),
   'icon_checkbox_on': (
-    offset-x: -244px,
+    offset-x: -220px,
     offset-y: -327px,
     width: 16px,
     height: 16px
   ),
   'icon_circle_minus': (
     offset-x: -302px,
-    offset-y: -76px,
+    offset-y: -38px,
     width: 26px,
     height: 26px
   ),
   'icon_circle_minus_on': (
     offset-x: -302px,
-    offset-y: -110px,
+    offset-y: -72px,
     width: 26px,
     height: 26px
   ),
   'icon_circle_plus': (
     offset-x: -302px,
-    offset-y: -144px,
+    offset-y: -106px,
     width: 26px,
     height: 26px
   ),
   'icon_circle_plus_on': (
     offset-x: -302px,
-    offset-y: -178px,
+    offset-y: -140px,
     width: 26px,
     height: 26px
   ),
   'icon_close': (
-    offset-x: -256px,
-    offset-y: -98px,
-    width: 36px,
-    height: 36px
+    offset-x: -64px,
+    offset-y: -295px,
+    width: 24px,
+    height: 24px
   ),
   'icon_copy': (
     offset-x: -106px,
@@ -112,18 +112,18 @@ $icons-svg-vars: (
   ),
   'icon_customer': (
     offset-x: -340px,
-    offset-y: -278px,
+    offset-y: -246px,
     width: 20px,
     height: 20px
   ),
   'icon_customer_black': (
-    offset-x: -274px,
-    offset-y: -237px,
+    offset-x: -340px,
+    offset-y: -274px,
     width: 20px,
     height: 20px
   ),
   'icon_customer_white': (
-    offset-x: -128px,
+    offset-x: -96px,
     offset-y: -295px,
     width: 24px,
     height: 24px
@@ -141,7 +141,7 @@ $icons-svg-vars: (
     height: 10px
   ),
   'icon_download': (
-    offset-x: -160px,
+    offset-x: -128px,
     offset-y: -295px,
     width: 24px,
     height: 24px
@@ -153,7 +153,7 @@ $icons-svg-vars: (
     height: 90px
   ),
   'icon_file_clear': (
-    offset-x: -192px,
+    offset-x: -160px,
     offset-y: -295px,
     width: 24px,
     height: 24px
@@ -165,7 +165,7 @@ $icons-svg-vars: (
     height: 44px
   ),
   'icon_header_close_mo': (
-    offset-x: -224px,
+    offset-x: -192px,
     offset-y: -295px,
     width: 24px,
     height: 24px
@@ -176,6 +176,12 @@ $icons-svg-vars: (
     width: 32px,
     height: 32px
   ),
+  'icon_home_gray': (
+    offset-x: -244px,
+    offset-y: -327px,
+    width: 16px,
+    height: 16px
+  ),
   'icon_hyphen': (
     offset-x: -268px,
     offset-y: -327px,
@@ -183,14 +189,14 @@ $icons-svg-vars: (
     height: 16px
   ),
   'icon_input_search': (
-    offset-x: -256px,
+    offset-x: -224px,
     offset-y: -295px,
     width: 24px,
     height: 24px
   ),
   'icon_layer_close': (
-    offset-x: -302px,
-    offset-y: 0px,
+    offset-x: -230px,
+    offset-y: -237px,
     width: 30px,
     height: 30px
   ),
@@ -202,7 +208,7 @@ $icons-svg-vars: (
   ),
   'icon_link_arrow_gray': (
     offset-x: -340px,
-    offset-y: -192px,
+    offset-y: -160px,
     width: 22px,
     height: 22px
   ),
@@ -219,7 +225,7 @@ $icons-svg-vars: (
     height: 16px
   ),
   'icon_location': (
-    offset-x: -194px,
+    offset-x: -150px,
     offset-y: -237px,
     width: 32px,
     height: 32px
@@ -237,14 +243,14 @@ $icons-svg-vars: (
     height: 20px
   ),
   'icon_menu_black': (
-    offset-x: -288px,
+    offset-x: -256px,
     offset-y: -295px,
     width: 24px,
     height: 24px
   ),
   'icon_menu_white': (
-    offset-x: -340px,
-    offset-y: 0px,
+    offset-x: -288px,
+    offset-y: -295px,
     width: 24px,
     height: 24px
   ),
@@ -256,7 +262,7 @@ $icons-svg-vars: (
   ),
   'icon_minus_mo': (
     offset-x: -302px,
-    offset-y: -212px,
+    offset-y: -174px,
     width: 26px,
     height: 26px
   ),
@@ -285,7 +291,7 @@ $icons-svg-vars: (
     height: 90px
   ),
   'icon_phone': (
-    offset-x: -234px,
+    offset-x: -190px,
     offset-y: -237px,
     width: 32px,
     height: 32px
@@ -298,37 +304,37 @@ $icons-svg-vars: (
   ),
   'icon_plus_mo': (
     offset-x: -302px,
-    offset-y: -246px,
+    offset-y: -208px,
     width: 26px,
     height: 26px
   ),
   'icon_popup_arrow': (
     offset-x: -340px,
-    offset-y: -32px,
+    offset-y: 0px,
     width: 24px,
     height: 24px
   ),
   'icon_popup_arrow_disabled': (
     offset-x: -340px,
-    offset-y: -64px,
+    offset-y: -32px,
     width: 24px,
     height: 24px
   ),
   'icon_popup_checkbox_off': (
     offset-x: -340px,
-    offset-y: -96px,
+    offset-y: -64px,
     width: 24px,
     height: 24px
   ),
   'icon_popup_checkbox_on': (
     offset-x: -340px,
-    offset-y: -128px,
+    offset-y: -96px,
     width: 24px,
     height: 24px
   ),
   'icon_popup_close': (
     offset-x: -340px,
-    offset-y: -160px,
+    offset-y: -128px,
     width: 24px,
     height: 24px
   ),
@@ -393,14 +399,14 @@ $icons-svg-vars: (
     height: 90px
   ),
   'icon_search_mo': (
-    offset-x: -106px,
-    offset-y: -237px,
+    offset-x: -256px,
+    offset-y: -98px,
     width: 36px,
     height: 36px
   ),
   'icon_search_small_mo': (
     offset-x: -302px,
-    offset-y: -38px,
+    offset-y: 0px,
     width: 30px,
     height: 30px
   ),
@@ -411,7 +417,7 @@ $icons-svg-vars: (
     height: 20px
   ),
   'icon_search_white_mo': (
-    offset-x: -150px,
+    offset-x: -106px,
     offset-y: -237px,
     width: 36px,
     height: 36px

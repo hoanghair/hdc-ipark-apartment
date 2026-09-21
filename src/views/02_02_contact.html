@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "오시는길 | IPARK 분양사이트 템플릿",
+  "listTitle": "오시는길 : 분양정보",
+  "metaDesc":"IPARK 분양사이트 템플릿",
+  "ogTitle":"IPARK | IPARK 분양사이트 템플릿",
+  "ogDesc":"IPARK 분양사이트 템플릿",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs')%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="contact">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', '분양정보', '오시는길'],
+        title: 'CONTACT',
+        subTitle: '청주의 중심에서 누리는 더 나은 일상.',
+        desc: `교통과 교육, 생활 인프라가 가까이 자리한 가경동의 풍부한 생활환경을 누립니다.<br class="only_pc">
+        주요 생활권과 편리하게 연결되는 입지적 장점을 바탕으로<br class="only_pc">
+        일상의 편리함과 여유를 모두 갖춘 새로운 주거 가치를 제안합니다.`,
+        imgs: ['../img/sub/01/img_kv_01_01.jpg', '../img/sub/01/img_kv_01_02.jpg'],
+      })%>
+
+      <div class="contact_content">
+        <section class="sec_overview sec_overview_map">
+          <div class="inner">
+            <div class="map_img">
+              <img class="only_pc" src="../img/sub/01/img_map_01_pc.jpg" alt="">
+              <img class="only_mo" src="../img/sub/01/img_map_01_mo.jpg" alt="">
+            </div>
+          </div>
+        </section>
+        <section class="sec_overview sec_overview_info">
+          <dl class="list_info">
+            <div class="item_info animate">
+              <dt class="item_title">현장</dt>
+              <dd class="item_desc">경기도 의정부시 의정부동 253-19일원</dd>
+              <dd class="item_desc_btns">
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '네이버 지도 보기',
+                  target: '_blank',
+                })%>
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '카카오 지도 보기',
+                  target: '_blank',
+                })%>
+              </dd>
+            </div>
+            <div class="item_info animate">
+              <dt class="item_title">견본주택</dt>
+              <dd class="item_desc">경기도 의정부시 의정부동 240-44일원</dd>
+              <dd class="item_desc_btns">
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '네이버 지도 보기',
+                  target: '_blank',
+                })%>
+                <%-include('./include/button/btn_link_border.ejs', {
+                  href: '#',
+                  text: '카카오 지도 보기',
+                  target: '_blank',
+                })%>
+              </dd>
+            </div>
+            <div class="item_info animate">
+              <dt class="item_title">대표번호</dt>
+              <dd class="item_desc">1566-0431</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

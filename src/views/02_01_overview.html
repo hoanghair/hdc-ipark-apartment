@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<%-include('./include/layout/head.ejs',{
+  "title": "사업개요 | IPARK 분양사이트 템플릿",
+  "listTitle": "사업개요 : 분양정보",
+  "metaDesc":"IPARK 분양사이트 템플릿",
+  "ogTitle":"IPARK | IPARK 분양사이트 템플릿",
+  "ogDesc":"IPARK 분양사이트 템플릿",
+  "ogImage":"../img/common/ipark-og-image.jpg",
+  })%>
+<body>
+<%-include('./include/layout/skipnavigation.ejs')%>
+  <div class="wrap">
+    <!-- Header -->
+    <%-include('./include/layout/header.ejs')%>
+    <!-- //Header -->
+    <!-- Contents -->
+    <main class="container" id="content">
+    <%-include('./include/sub/sec_sub_kv.ejs', {
+        breadcrumb: ['HOME', '분양정보', '사업개요'],
+        title: 'BRIEF',
+        subTitle: '일상에 새로운 가치를 더합니다.',
+        desc: `청주의 중심, 가경동에서 새로운 주거의 기준을 제시합니다.<br class="only_pc">
+              교통, 교육, 생활 인프라를 두루 갖춘 아이파크만의 품격 있는 라이프스타일을 경험하세요.<br class="only_pc">
+              오랜 노하우와 기술력을 바탕으로 더 나은 주거 공간의 가치를 실현합니다.`,
+        imgs: ['../img/sub/01/img_kv_01_01.jpg', '../img/sub/01/img_kv_01_02.jpg'],
+      })%>
+
+      <div class="overview_content">
+        <section class="sec_overview sec_overview_intro">
+          <div class="box_img">
+            <div class="list_img">
+              <div class="item_img type_top animate">
+                <img src="../img/sub/01/img_overview_01_01.jpg" alt="">
+              </div>
+              <div class="item_img type_bottom animate">
+                <img src="../img/sub/01/img_overview_01_02.jpg" alt="">
+              </div>
+            </div>
+            <div class="item_img type_tall animate">
+              <img src="../img/sub/01/img_overview_01_03.jpg" alt="">
+            </div>
+          </div>
+          <div class="box_text">
+            <h2 class="title animate">A New Chapter <br>Of Living</h2>
+            <p class="desc animate">삶의 모든 순간에 가치를 더합니다.<br>
+              도심 속 자연, 편리한 교통, 풍부한 교육 환경까지 가경 7단지는<br class="only_pc">
+              일상 속 프리미엄을 실현합니다.</p>
+            <p class="desc animate">쾌적한 주거환경과 차별화된 커뮤니티로 새로운 생활의 기준을 <br class="only_pc">만들어 갑니다.</p>
+          </div>
+        </section>
+        <section class="sec_overview sec_overview_value">
+          <div class="box_value_swiper swiper">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="box_text">
+                  <h2 class="title animate">도시의 중심으로 이어지는 길</h2>
+                  <p class="desc animate">주요 도로와 교통망을 통해 청주 주요 생활권을 편리하게 오가며,<br class="only_pc">
+                    인접 도시까지 빠르게 연결되는 쾌적한 교통환경을 누립니다.<br class="only_pc">
+                    더 가까워진 거리만큼 일상의 반경도 넓어집니다.</p>
+                </div>
+                <div class="box_img animate">
+                  <img src="../img/sub/01/img_overview_02_01.jpg" alt="">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="box_text">
+                  <h2 class="title animate">일상을 채우는 다양한 즐거움</h2>
+                  <p class="desc animate">쇼핑과 문화, 여가와 휴식까지 다양한 경험을 가까이에서 누리며<br class="only_pc">
+                    각자의 취향에 맞는 풍요로운 일상을 만들어갑니다.<br class="only_pc">
+                    매일의 작은 즐거움이 더 나은 하루를 완성합니다.</p>
+                </div>
+                <div class="box_img animate">
+                  <img src="../img/sub/01/img_overview_02_02.jpg" alt="">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="box_text">
+                  <h2 class="title animate">가깝고 풍부한 교육환경</h2>
+                  <p class="desc animate">자녀의 성장과 미래를 위한 교육환경을 가까이에서 누리며<br class="only_pc">
+                    학교와 교육시설을 편리하게 이용할 수 있는 환경을 제공합니다.<br class="only_pc">
+                    가족의 오늘과 내일을 함께 생각하는 주거환경을 완성합니다.</p>
+                </div>
+                <div class="box_img animate">
+                  <img src="../img/sub/01/img_overview_02_03.jpg" alt="">
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="box_text">
+                  <h2 class="title animate">고품격 소셜 커뮤니티</h2>
+                  <p class="desc animate">휴식과 여가, 소통을 위한 다양한 커뮤니티 공간을 마련하여<br class="only_pc">
+                    입주민이 함께 즐기고 교류할 수 있는 특별한 공간을 제공합니다.<br class="only_pc">
+                    더 풍요로운 주거생활과 새로운 일상의 가치를 경험합니다.</p>
+                </div>
+                <div class="box_img animate">
+                  <img src="../img/sub/01/img_overview_02_01.jpg" alt="">
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="sec_overview sec_overview_beyond">
+          <div class="box_text">
+            <h2 class="title animate">Beyond The Ordinary <br>For Better Life</h2>
+            <p class="desc animate">
+              새로운 기준을 향한 아이파크의 시선.<br>
+              아이파크는 익숙한 주거의 기준에 머무르지 않고, 변화하는 삶과 공간의 관계에서 새로운<br class="only_pc">
+              가능성을 찾습니다. 사람과 도시, 일상의 변화를 세심하게 바라보며 더 나은 주거 경험을<br class="only_pc">
+              만들어가고, 그 안에서 삶의 새로운 가치를 발견해 일상에 새로운 기준을 제시합니다.
+            </p>
+					</div>
+        </section>
+        <section class="sec_overview sec_overview_info">
+          <dl class="list_info">
+            <div class="item_info animate">
+              <dt class="item_title">사업명칭</dt>
+              <dd class="item_desc">의정부 캠프라과디아 <br>주상복합 신축공사 (E4BL)</dd>
+            </div>
+            <div class="item_info animate">
+              <dt class="item_title">대지위치</dt>
+              <dd class="item_desc">경기도 의정부시 의정부동 <br>253-19일원</dd>
+            </div>
+            <div class="item_info animate">
+              <dt class="item_title">건축규모</dt>
+              <dd class="item_desc">지하 2층 ~ 지상 47층 3개동</dd>
+            </div>
+            <div class="item_info animate">
+              <dt class="item_title">대지면적</dt>
+              <dd class="item_desc">9,076.90㎡ <br>연면적_103,703.91㎡</dd>
+            </div>
+            <div class="item_info animate">
+              <dt class="item_title">세대수</dt>
+              <dd class="item_desc">총 556세대 <br>아파트 400세대, 오피스텔 156실</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </main>
+    <!-- // Contents -->
+    <!-- Footer -->
+    <%-include('./include/layout/footer.ejs')%>
+    <!-- //Footer -->
+  </div>
+<%-include('./include/layout/script.ejs')%>
+</body>
+</html>

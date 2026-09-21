@@ -2,7 +2,7 @@
 <html lang="ko">
 <%-include('./include/layout/head.ejs',{
   "title": "IPARK | IPARK 분양사이트 템플릿",
-  "listTitle": "메인 : 메인",
+  "listTitle": "공통 팝업 : 메인",
   "metaDesc":"IPARK 분양사이트 템플릿",
   "ogTitle":"IPARK | IPARK 분양사이트 템플릿",
   "ogDesc":"IPARK 분양사이트 템플릿",
@@ -20,7 +20,6 @@
     <main class="container" id="content">
       <!-- Main KV -->
       <section class="sec_main_kv">
-
         <ul class="list_kv_img">
           <li class="item_kv_img">
             <img src="../img/main/img_kv_00.jpg" alt="" class="only_pc">
@@ -452,6 +451,7 @@
       </section>
     </main>
     <!-- // Contents -->
+    <%-include('./include/layer/popup.ejs')%>
     <!-- Footer -->
     <%-include('./include/layout/footer.ejs')%>
     <!-- //Footer -->

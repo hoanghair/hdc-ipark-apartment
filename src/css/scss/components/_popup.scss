@@ -3,17 +3,10 @@
   box-sizing: border-box;
   top: 50%;
   transform: translateY(-50%);
-  background: $white;
-  border-radius: 12px;
+  background: $beige-bg;
   z-index: 100;
   @include vw-convert-pc(right, 60);
   @include vw-convert-pc(width, 432);
-  @include vw-convert-pc(padding, 24);
-  .box_until{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
   .box_popup_checkbox{
     input:checked + .label{
       &:before{
@@ -23,9 +16,10 @@
     .label{
       display: flex;
       align-items: center;
-      color: #434343;
+      color: $font-gray;
+      cursor: pointer;
       @include vw-convert-pc(gap, 4);
-      @include vw-font-style-pc(14, 500, 1.32);
+      @include vw-font-style-pc(14, 500, 1.5);
       &:before{
         content: '';
         display: block;
@@ -34,6 +28,21 @@
     }
   }
   .btn_close{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     &:before{
       content: '';
       display: block;
@@ -43,46 +52,56 @@
 
   .box_popup_swiper{
     overflow: hidden;
-    @include vw-convert-pc(margin-top, 18);
     .box_popup_img{
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 640 / 920;
       img{
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
+    .swiper-wrapper{
+      position: relative;
+    }
   }
-  .box_btn{ 
+  .box_btn{
+    position: absolute;
+    left: 50%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+    box-sizing: border-box;
     @include vw-convert-pc(gap, 12);
-    @include vw-convert-pc(margin-top, 18);
+    @include vw-convert-pc(bottom, 26);
+    @include vw-convert-pc(padding, (0 26));
+    @include vw-convert-pc(height, 55);
+    &:has(.btn_popup:nth-child(2)) {
+      @include vw-convert-pc(height, 122); // 55 + 12 + 55
+    }
     .btn_popup{
       flex: 1;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: #434343;
-      border: 1px solid #DCDCDC;
-      border-radius: 4px;
-      @include vw-convert-pc(height, 44);
+      border: none;
+      @include vw-convert-pc(height, 55);
       @include vw-convert-pc(gap, 4);
-      @include vw-font-style-pc(14, 500, 1.32);
-      &.type_download{
-        &:after{
-          display: block;
-          content:'';
-          @include useSvg-icons('icon_popup_download', 18px);
-
-        }
-      }
     }
+  }
+  .box_popup_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dddddd;
+    @include vw-convert-pc(margin, (0 16 12));
+    @include vw-convert-pc(padding-top, 12);
   }
   .box_swiper_control{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include vw-convert-pc(margin-top, 24);
+    @include vw-convert-pc(gap, 8);
     .btn_prev,
     .btn_next{
       &:before{
@@ -107,12 +126,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family:"YoonGothic750";
-      @include vw-font-style-pc(14, 500, 1.32);
-
+      @include vw-font-style-pc(16, 500, 1.5);
+      @include vw-convert-pc(gap, 6);
     }
   }
-  
+
 }
 
 @include breakpoint(mobile) {
@@ -121,7 +139,6 @@
     right: 20px;
     transform: translateY(-50%);
     width: auto;
-    padding: 18px 20px;
     .box_popup_checkbox{
       input:checked + .label{
         &:before{
@@ -137,31 +154,26 @@
       }
     }
     .btn_close{
+      top: 10px;
+      right: 10px;
+      width: 32px;
+      height: 32px;
       &:before{
-        @include useSvg-icons-mo('icon_popup_close', 20px);
+        @include useSvg-icons-mo('icon_popup_close', 28px);
       }
     }
-  
-    .box_popup_swiper{
-      margin-top: 18px;
-    }
-    .box_btn{ 
+    .box_btn{
       gap: 8px;
-      margin-top: 12px;
+      height: 38px;
+      &:has(.btn_popup:nth-child(2)) {
+        height: 86px; // 38 + 8 + 38
+      }
       .btn_popup{
-        height: 32px;
+        height: 38px;
         gap: 2px;
-        font-size: 11px;
-        &.type_download{
-          &:after{
-            @include useSvg-icons-mo('icon_popup_download', 16px);
-  
-          }
-        }
       }
     }
     .box_swiper_control{
-      margin-top: 18px;
       .btn_prev,
       .btn_next{
         &:before{
@@ -173,12 +185,12 @@
           }
         }
       }
-  
+
       .swiper-pagination{
-        font-size: 11px;
-        gap: 4px; 
+        font-size: 14px;
+        gap: 4px;
       }
     }
-    
+
   }
 }

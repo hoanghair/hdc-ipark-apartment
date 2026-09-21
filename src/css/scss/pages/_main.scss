@@ -718,10 +718,6 @@
     display: flex;
     flex-shrink: 0;
     @include vw-convert-pc(gap, 8);
-
-    .btn_link_border {
-      @include vw-convert-pc(gap, 7);
-    }
   }
 
   .box_bg {
@@ -1196,10 +1192,6 @@
       width: 100%;
       padding-left: 38px;
       box-sizing: border-box;
-
-      .btn_link_border {
-        padding: 9.5px 12px;
-      }
     }
   }
 }
