@@ -112,6 +112,16 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+.swiper-fade {
+  .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+  }
+  .swiper-slide-active {
+    pointer-events: auto;
+  }
+}
+
 .swiper_navigation {
   display: flex;
   justify-content: flex-end;

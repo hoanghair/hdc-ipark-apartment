@@ -158,6 +158,11 @@
 
       .swiper-slide {
         height: auto;
+        transition: opacity 0.8s ease-in-out;
+
+        &.swiper-slide-active {
+          z-index: 1;
+        }
       }
     }
 
@@ -212,6 +217,18 @@
       font-family: 'Intrinseca', sans-serif;
       @include vw-font-style-pc(20, 400, 1.5);
     }
+
+    &:has(.btn_prev.swiper-button-disabled) {
+      .swiper-pagination-current {
+        color: #afafaf;
+      }
+    }
+
+    &:has(.btn_next.swiper-button-disabled) {
+      .swiper-pagination-total {
+        color: #afafaf;
+      }
+    }
   }
 
   .box_content {
@@ -239,6 +256,11 @@
 
       .swiper-slide {
         height: 100% !important;
+        transition: opacity 0.8s ease-in-out;
+
+        &.swiper-slide-active {
+          z-index: 1;
+        }
       }
     }
 
@@ -246,6 +268,14 @@
       overflow: hidden;
       flex: 0 0 auto;
       @include vw-convert-pc(width, 208);
+
+      .swiper-slide {
+        transition: opacity 0.8s ease-in-out;
+
+        &.swiper-slide-active {
+          z-index: 1;
+        }
+      }
     }
 
     .sub_desc {
@@ -448,6 +478,7 @@
 // 유닛 타입
 .sec_main_unit {
   display: flex;
+  overflow-anchor: none;
   // height: 100dvh;
 
   .box_bg {

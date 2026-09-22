@@ -40,27 +40,27 @@ const generateImages = () =>{
       ]
     },
     optimization: {
-      minimize: true,
-      minimizer: [
-        new ImageMinimizerPlugin({
-          minimizer: {
-            implementation: ImageMinimizerPlugin.imageminGenerate,
-            options: {
-              plugins: [
-                ['gifsicle', { interlaced: true }],
-                ['mozjpeg', { quality: 80 }],
-                ['optipng', { optimizationLevel: 5 }],
-                ['svgo', {
-                  plugins: [
-                    { name: 'removeViewBox', active: true },
-                    { name: 'removeDimensions', active: false },
-                  ],
-                }],
-              ],
-            },
-          },
-        }),
-      ],
+      minimize: false,
+      // minimizer: [
+      //   new ImageMinimizerPlugin({
+      //     minimizer: {
+      //       implementation: ImageMinimizerPlugin.imageminGenerate,
+      //       options: {
+      //         plugins: [
+      //           ['gifsicle', { interlaced: true }],
+      //           ['mozjpeg', { quality: 80 }],
+      //           ['optipng', { optimizationLevel: 5 }],
+      //           ['svgo', {
+      //             plugins: [
+      //               { name: 'removeViewBox', active: true },
+      //               { name: 'removeDimensions', active: false },
+      //             ],
+      //           }],
+      //         ],
+      //       },
+      //     },
+      //   }),
+      // ],
     }
   }, webpack))
   .pipe(dest(config.imgSetting.dist));
@@ -88,11 +88,11 @@ const generateSprite = () => {
 
   var imgStream = spriteData.img
     .pipe(vinylBuffer())
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 5}),
-    ], {
-      verbose: true
-    }))
+    // .pipe(imagemin([
+    //   imagemin.optipng({optimizationLevel: 5}),
+    // ], {
+    //   verbose: true
+    // }))
     .pipe(dest('./dist/img/'));
     var cssStream = spriteData.css
     .pipe(tap(file => {
@@ -154,22 +154,22 @@ const spriteSvg = async () => {
     folders.map((folder) => {
       return new Promise((resolve => {
         src(path.join(`${config.dir.src}/img/sprites-svg`, folder, '*.svg'))
-          .pipe(cache('spriteSVG')) // SVG 변경 여부에 따라 캐싱        
+          .pipe(cache('spriteSVG')) // SVG 변경 여부에 따라 캐싱
           .pipe(tap(file => {
             console.log(`📦 generateSprite 처리 중: ${file.relative}`);
           }))
           .pipe(sort())
           .pipe(svgSprite(options.spritesmith({folder, config})))
-          .pipe(imagemin([
-            imagemin.svgo({ // svg
-              plugins: [
-                {removeViewBox: false},
-                {cleanupIDs: false}
-              ]
-            })
-          ], {
-            verbose: true
-          }))
+          // .pipe(imagemin([
+          //   imagemin.svgo({ // svg
+          //     plugins: [
+          //       {removeViewBox: false},
+          //       {cleanupIDs: false}
+          //     ]
+          //   })
+          // ], {
+          //   verbose: true
+          // }))
           .pipe(dest('./'))
           .on('end', resolve);
       }))

@@ -129,6 +129,20 @@
       @include vw-font-style-pc(16, 500, 1.5);
       @include vw-convert-pc(gap, 6);
     }
+
+    &:has(.btn_prev.swiper-button-disabled),
+    &.is_first {
+      .swiper-pagination-current {
+        color: $light-gray;
+      }
+    }
+
+    &:has(.btn_next.swiper-button-disabled),
+    &.is_last {
+      .swiper-pagination-total {
+        color: $light-gray;
+      }
+    }
   }
 
 }

@@ -101,7 +101,7 @@
       fadeEffect: {
         crossFade: true,
       },
-      speed: 700,
+      speed: 800,
       allowTouchMove: false,
     };
 

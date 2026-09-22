@@ -98,6 +98,10 @@
       &:after {
         @include useSvg-icons('icon_call_black', 20px);
       }
+
+      span {
+        font-family: 'Intrinseca', sans-serif;
+      }
     }
   }
 }
@@ -123,6 +127,26 @@
       }
     }
 
+    &:not(.type_main) .header_util_info,
+    &:has(
+        .gnb_item:hover,
+        .gnb_link:focus-visible,
+        .gnb_depth_link:focus-visible
+      ) .header_util_info {
+      .btn_register,
+      .btn_call {
+        color: $font-black;
+
+        &:before {
+          opacity: 0;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
     &:has(
         .gnb_item:hover,
         .gnb_link:focus-visible,
@@ -133,20 +157,6 @@
       }
       .header_inner {
         background: $beige-bg;
-      }
-      .header_util_info {
-        .btn_register,
-        .btn_call {
-          color: $font-black;
-
-          &:before {
-            opacity: 0;
-          }
-
-          &:after {
-            opacity: 1;
-          }
-        }
       }
     }
 

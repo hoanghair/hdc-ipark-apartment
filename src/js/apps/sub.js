@@ -15,6 +15,10 @@
       autoHeight: !overviewMq.matches,
       observer: true,
       observeParents: true,
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
       pagination: {
         el: '.sec_overview_value .swiper-pagination',
         clickable: true,

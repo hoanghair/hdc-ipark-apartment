@@ -77,11 +77,23 @@
     }
   };
 
+  let holdHeaderVisibility = false;
+  let holdHeaderTimer;
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.btn_unit')) return;
+    holdHeaderVisibility = true;
+    window.clearTimeout(holdHeaderTimer);
+    holdHeaderTimer = window.setTimeout(() => {
+      holdHeaderVisibility = false;
+    }, 800);
+  });
+
   lenis.on('scroll', ({ direction }) => {
     ScrollTrigger.update();
     updateBtnTop();
 
-    if (!canHide) return;
+    if (!canHide || holdHeaderVisibility) return;
 
     if (isMobile() && header.classList.contains('is_open')) {
       return;
